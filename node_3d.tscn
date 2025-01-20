@@ -1,9 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfm45yomcp1n4"]
+[gd_scene load_steps=2 format=3 uid="uid://cwh5k5apkq7pu"]
 
 [sub_resource type="TorusMesh" id="TorusMesh_io17e"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.626667, 0.535739, 0.565925, -0.693128, -0.715103, -0.0905631, 0.356176, -0.449012, 0.819468, 8.74242, 0, 0)
 mesh = SubResource("TorusMesh_io17e")
