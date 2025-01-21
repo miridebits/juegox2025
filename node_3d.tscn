@@ -1,10 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://cfm45yomcp1n4"]
+[gd_scene load_steps=5 format=3 uid="uid://cfm45yomcp1n4"]
+
+[ext_resource type="Script" path="res://CharacterBody3D.gd" id="1_h7p4s"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t06wn"]
+margin = 0.0
 size = Vector3(60, 2, 60)
 
 [sub_resource type="BoxMesh" id="BoxMesh_j4bds"]
 size = Vector3(60, 2, 60)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ryngb"]
 
 [node name="Escena base" type="Node3D"]
 
@@ -20,8 +25,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
 mesh = SubResource("BoxMesh_j4bds")
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+script = ExtResource("1_h7p4s")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9505, 0)
+mesh = SubResource("CapsuleMesh_ryngb")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4391, -0.490725)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 65, 0)
-light_energy = 3.459
+light_energy = 1.021
 shadow_enabled = true
