@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b02qtc8h1wlv0"]
+
+[node name="Personaje" type="CharacterBody3D"]
+
+[node name="Pivot" type="Node" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
