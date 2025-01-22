@@ -16,6 +16,8 @@ func _on_body_entered(body):
 		if body.name == "Personaje principal":
 			player_in_range = true
 			print("El jugador ha entrado en el rango de interacción")
+			Dialogic.start("continuar")
+			pass
 
 # Esta función se llama cuando otro cuerpo sale del área de proximidad
 func _on_body_exited(body):
@@ -34,4 +36,3 @@ func _process(delta):
 func interact():
 	# Aquí va lo que sucederá cuando el jugador presione la tecla de interacción (E)
 	Dialogic.start("escena1")
-	# Puedes agregar aquí la lógica de la acción, como abrir un menú, mostrar un mensaje, etc

@@ -22,7 +22,7 @@ height = 2.8
 height = 2.03319
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_bx7xw"]
-radius = 4.0
+radius = 2.0
 
 [node name="Escena base" type="Node3D"]
 transform = Transform3D(1.008, 0, 0, 0, 1.008, 0, 0, 0, 1.008, -0.141683, 0, 0.764498)
