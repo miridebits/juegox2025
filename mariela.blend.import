@@ -3,7 +3,11 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
+<<<<<<< Updated upstream
 uid="uid://n1ak43tb2670"
+=======
+uid="uid://cxyau5oinplx"
+>>>>>>> Stashed changes
 path="res://.godot/imported/mariela.blend-927541ccee0f3f776b9abb4bf2d9aeaf.scn"
 
 [deps]

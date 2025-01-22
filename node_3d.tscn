@@ -45,19 +45,30 @@ transform = Transform3D(0.490556, 0, 0, 0, 0.6885, 0, 0, 0, 0.6885, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_nwhqf")
 
 [node name="Camera3D" type="Camera3D" parent="Personaje principal"]
+<<<<<<< Updated upstream
 transform = Transform3D(0.992064, 0, 0, 0, 0.991923, 0.0167253, 0, -0.0167253, 0.991923, 0, 1.55573, -0.598163)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 65, 0)
 light_energy = 1.021
 shadow_enabled = true
+=======
+transform = Transform3D(0.992063, 0, 0, 0, 0.991922, 0.0167253, 0, -0.0167253, 0.991922, 0, 1.5541, -0.583327)
+fov = 134.3
+>>>>>>> Stashed changes
 
 [node name="Personaje 1" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -3)
 script = ExtResource("2_racle")
 
 [node name="Area3D" type="Area3D" parent="Personaje 1"]
+<<<<<<< Updated upstream
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.951, -3)
+=======
+
+[node name="mariela" parent="Personaje 1/Area3D" instance=ExtResource("3_aumme")]
+transform = Transform3D(-0.676246, 0, 0.736676, 0, 1, 0, -0.736676, 0, -0.676246, 0, 0, 0)
+>>>>>>> Stashed changes
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Personaje 1/Area3D"]
 transform = Transform3D(-0.350765, -0.231259, 0.907459, -0.109688, 0.972504, 0.205436, -0.930017, -0.0274777, -0.366487, 0.138223, -0.131598, -0.07829)
