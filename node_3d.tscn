@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cfm45yomcp1n4"]
+[gd_scene load_steps=6 format=3 uid="uid://cfm45yomcp1n4"]
 
 [ext_resource type="Script" path="res://CharacterBody3D.gd" id="1_h7p4s"]
 
@@ -11,7 +11,12 @@ size = Vector3(60, 2, 60)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ryngb"]
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nwhqf"]
+radius = 0.8
+height = 2.8
+
 [node name="Escena base" type="Node3D"]
+transform = Transform3D(1.008, 0, 0, 0, 1.008, 0, 0, 0, 1.008, 0, 0, 0)
 
 [node name="Piso" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
@@ -31,8 +36,12 @@ script = ExtResource("1_h7p4s")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9505, 0)
 mesh = SubResource("CapsuleMesh_ryngb")
 
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(0.490556, 0, 0, 0, 0.6885, 0, 0, 0, 0.6885, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_nwhqf")
+
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4391, -0.490725)
+transform = Transform3D(0.992064, 0, 0, 0, 0.991923, 0.0167253, 0, -0.0167253, 0.991923, 0, 1.55573, -0.598163)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 65, 0)
