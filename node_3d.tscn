@@ -2,14 +2,8 @@
 
 [ext_resource type="Script" path="res://CharacterBody3D.gd" id="1_h7p4s"]
 [ext_resource type="Script" path="res://Personaje 1.gd" id="2_racle"]
-[ext_resource type="PackedScene" uid="uid://n1ak43tb2670" path="res://mariela.blend" id="3_0hdbg"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_t06wn"]
-margin = 0.0
-size = Vector3(60, 2, 60)
-
-[sub_resource type="BoxMesh" id="BoxMesh_j4bds"]
-size = Vector3(60, 2, 60)
+[ext_resource type="PackedScene" uid="uid://ox0rgk670k0u" path="res://mariela.glb" id="3_aumme"]
+[ext_resource type="PackedScene" uid="uid://bod7gmjxf1msp" path="res://CASA.glb" id="4_dy6kp"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ryngb"]
 
@@ -18,20 +12,13 @@ radius = 0.8
 height = 2.8
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_bx7xw"]
-radius = 4.0
+radius = 1.96409
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iyx7x"]
+size = Vector3(11.1838, 1, 11.4424)
 
 [node name="Escena base" type="Node3D"]
 transform = Transform3D(1.008, 0, 0, 0, 1.008, 0, 0, 0, 1.008, -0.141683, 0, 0.764498)
-
-[node name="Piso" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Piso"]
-transform = Transform3D(0.999983, -0.00487525, 0.0030439, 0.00488335, 0.999985, -0.00265817, -0.00303089, 0.00267299, 0.999992, 0, 0, 0)
-shape = SubResource("BoxShape3D_t06wn")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Piso"]
-mesh = SubResource("BoxMesh_j4bds")
 
 [node name="Personaje principal" type="CharacterBody3D" parent="."]
 script = ExtResource("1_h7p4s")
@@ -46,22 +33,31 @@ shape = SubResource("CapsuleShape3D_nwhqf")
 
 [node name="Camera3D" type="Camera3D" parent="Personaje principal"]
 transform = Transform3D(0.992064, 0, 0, 0, 0.991923, 0.0167253, 0, -0.0167253, 0.991923, 0, 1.55573, -0.598163)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 65, 0)
-light_energy = 1.021
-shadow_enabled = true
+fov = 134.3
 
 [node name="Personaje 1" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.34851, 0, -3)
 script = ExtResource("2_racle")
 
 [node name="Area3D" type="Area3D" parent="Personaje 1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.951, -3)
+
+[node name="mariela" parent="Personaje 1/Area3D" instance=ExtResource("3_aumme")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Personaje 1/Area3D"]
-transform = Transform3D(-0.350765, -0.231259, 0.907459, -0.109688, 0.972504, 0.205436, -0.930017, -0.0274777, -0.366487, 0.138223, -0.131598, -0.07829)
+transform = Transform3D(-0.350765, -0.231259, 0.907459, -0.109688, 0.972504, 0.205436, -0.930017, -0.0274777, -0.366487, 0.014, 0, 0)
 shape = SubResource("SphereShape3D_bx7xw")
 
-[node name="mariela" parent="Personaje 1/Area3D" instance=ExtResource("3_0hdbg")]
-transform = Transform3D(-0.929184, 0, -0.369617, 0, 1, 0, 0.369617, 0, -0.929184, -0.181998, -0.965023, -0.023241)
+[node name="CASA" parent="." instance=ExtResource("4_dy6kp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13262, 0, 1.33672)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.53358, 0, 0)
+shape = SubResource("BoxShape3D_iyx7x")
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(0.992063, 0, 0, 0, 0.992063, 0, 0, 0, 0.992063, -2.30852, 4.77818, 0)
+light_energy = 3.424

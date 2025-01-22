@@ -1,0 +1,39 @@
+# Archimesh room export data
+# 2025-01-22 18:34:59
+#======================================================
+name=Room.001
+height=3.0
+thickness=0.05
+inverse=False
+ceiling=False
+floor=True
+close=True
+#
+# Walls
+#
+walls=7
+w=-6.5,a=False,r=0.0,h=0,m=0.0,f=0.0,c=False,cf=1.0,cd=180.0,cs=12
+w=-8.0,a=False,r=90.0,h=0,m=0.0,f=0.0,c=False,cf=1.0,cd=180.0,cs=12
+w=5.5,a=False,r=0.0,h=0,m=0.0,f=0.0,c=False,cf=1.0,cd=180.0,cs=12
+w=4.973,a=True,r=90.0,h=0,m=0.0,f=0.0,c=True,cf=1.0,cd=174.1,cs=14
+w=-0.485,a=False,r=0.0,h=0,m=0.0,f=0.0,c=False,cf=1.0,cd=180.0,cs=12
+w=1.2,a=False,r=90.0,h=0,m=0.0,f=0.0,c=False,cf=1.0,cd=180.0,cs=12
+w=1.5,a=False,r=0.0,h=0,m=0.0,f=0.0,c=False,cf=1.0,cd=180.0,cs=12
+#
+# Baseboard
+#
+baseboard=False
+baseh=0.12
+baset=2.88
+#
+# Wall Cover
+#
+shell=False
+shellh=0.2
+shellt=0.025
+shellf=1.0
+shellb=1.0
+#
+# Materials
+#
+materials=True
