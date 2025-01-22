@@ -15,7 +15,8 @@ func _on_body_entered(body):
 	if body is CharacterBody3D:  # Cambia esto si es un nodo específico
 		if body.name == "Personaje principal":
 			player_in_range = true
-			OS.alert("El jugador ha entrado en el rango de interacción")
+			
+			#OS.alert("El jugador ha entrado en el rango de interacción")
 			print("El jugador ha entrado en el rango de interacción")
 			show_interaction_options()
 
@@ -25,7 +26,6 @@ func _on_body_exited(body):
 	if body is CharacterBody3D:  # Cambia esto si es un nodo específico
 		if body.name == "Personaje principal":
 			player_in_range = false
-			OS.alert("El jugador ha salido del rango de interacción")
 			print("El jugador ha salido del rango de interacción")
 			hide_interaction_options()
 
@@ -48,7 +48,7 @@ func _process(delta):
 # Función para manejar la interacción
 func interact():
 	# Aquí va lo que sucederá cuando el jugador presione la tecla de interacción (E)
-	print("Interacción realizada con el personaje.")
+	Dialogic.start("escena1")
 	# Puedes agregar aquí la lógica de la acción, como abrir un menú, mostrar un mensaje, etc.
 	# Ejemplo:
 	show_dialog()
