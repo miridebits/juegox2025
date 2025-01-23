@@ -2,9 +2,8 @@
 
 [ext_resource type="Script" path="res://CharacterBody3D.gd" id="1_h7p4s"]
 [ext_resource type="Script" path="res://Personaje 1.gd" id="2_racle"]
-[ext_resource type="PackedScene" uid="uid://ox0rgk670k0u" path="res://manu.glb" id="3_aumme"]
+[ext_resource type="PackedScene" uid="uid://dikbdcffvrkat" path="res://manu.glb" id="3_aumme"]
 [ext_resource type="PackedScene" uid="uid://bod7gmjxf1msp" path="res://CASA.glb" id="4_dy6kp"]
-
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ryngb"]
 
@@ -37,16 +36,16 @@ transform = Transform3D(0.992064, 0, 0, 0, 0.991923, 0.0167253, 0, -0.0167253, 0
 fov = 134.3
 
 [node name="Personaje 1" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.34851, 0, -3)
+transform = Transform3D(-0.563958, 0, -0.825803, 0, 1, 0, 0.825803, 0, -0.563958, -6.00513, 0, -3)
 script = ExtResource("2_racle")
 
 [node name="Area3D" type="Area3D" parent="Personaje 1"]
 
-[node name="mariela" parent="Personaje 1/Area3D" instance=ExtResource("3_aumme")]
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Personaje 1/Area3D"]
 transform = Transform3D(-0.350765, -0.231259, 0.907459, -0.109688, 0.972504, 0.205436, -0.930017, -0.0274777, -0.366487, 0.014, 0, 0)
 shape = SubResource("SphereShape3D_bx7xw")
+
+[node name="manu" parent="Personaje 1/Area3D" instance=ExtResource("3_aumme")]
 
 [node name="CASA" parent="." instance=ExtResource("4_dy6kp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13262, 0, 1.33672)
