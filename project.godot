@@ -23,8 +23,11 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 directories/dch_directory={
 "Burbuja": "res://Burbuja.dch",
+"Chica de los chisitos": "res://Personajes/Chica de los chisitos.dch",
 "Manu": "res://Manu.dch",
+"Narradora": "res://Personajes/Narradora.dch",
 "Personaje principal": "res://Personaje principal.dch",
+"Personajes/Manu": "res://Personajes/Manu.dch",
 "Timelines Dialogos Juego/Burbuja": "res://Burbuja.dch",
 "Timelines Dialogos Juego/Chica de los chisitos": "res://Chica de los chisitos.dch",
 "Timelines Dialogos Juego/Manu": "res://Manu.dch",
@@ -60,7 +63,17 @@ text/autopauses={}
 glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style="Default"
-variables={}
+variables={
+"Folder": {},
+"Return": "inicio",
+"VEREDICTO": "veredicto",
+"decisión": "inicio",
+"dibujo": false,
+"sangre": false,
+"valdes1": 0,
+"valdes2": 0,
+"valpreg": 0.0
+}
 
 [editor_plugins]
 

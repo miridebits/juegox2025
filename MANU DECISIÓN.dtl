@@ -294,7 +294,7 @@ if {valdes2} == 1:
 					Mirás a Pop y mirás a Manu. Parece hasta ofendida.
 					Burbuja: ¿Y, Manu? ¿Qué decís?
 					set {valdes1} += 2
-jump VEREDICTO
+					jump VEREDICTO
 - "Empezá a dibujar" | [if {dibujo} == true]
 Empezá a dibujar, Manu. Sé que tenés ganas de hacerlo.
 Manu se sorprende-.

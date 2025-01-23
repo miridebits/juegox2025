@@ -1,6 +1,10 @@
 extends CharacterBody3D
 
+#Manu
+
 var player_in_range = false
+var repeticion = true
+var introducciones = 0
 
 # Función que se ejecuta cuando el nodo está listo en la escena
 func _ready():
@@ -16,7 +20,12 @@ func _on_body_entered(body):
 		if body.name == "Personaje principal":
 			player_in_range = true
 			print("El jugador ha entrado en el rango de interacción")
-			Dialogic.start("continuar")
+			if repeticion:
+				Dialogic.start("Timelines Dialogos Juego/MANU INTRO")
+				introducciones += 1
+				repeticion = false
+			if introducciones == 4:
+				Dialogic.start("contiue")
 			pass
 
 # Esta función se llama cuando otro cuerpo sale del área de proximidad
@@ -29,10 +38,10 @@ func _on_body_exited(body):
 
 func _process(delta):
 	# Verificar si el jugador está en rango y presiona la tecla de interacción
-	if player_in_range and Input.is_action_just_pressed("interact"):
+	if player_in_range and Input.is_action_just_pressed("interact") and introducciones == 4:
 		interact()
 
 # Función para manejar la interacción
 func interact():
 	# Aquí va lo que sucederá cuando el jugador presione la tecla de interacción (E)
-	Dialogic.start("escena1")
+	Dialogic.start("Timelines Dialogos Juego/MANU DECISIÓN")

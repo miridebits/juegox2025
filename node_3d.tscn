@@ -40,12 +40,14 @@ transform = Transform3D(-0.563958, 0, -0.825803, 0, 1, 0, 0.825803, 0, -0.563958
 script = ExtResource("2_racle")
 
 [node name="Area3D" type="Area3D" parent="Personaje 1"]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Personaje 1/Area3D"]
-transform = Transform3D(-0.350765, -0.231259, 0.907459, -0.109688, 0.972504, 0.205436, -0.930017, -0.0274777, -0.366487, 0.014, 0, 0)
+transform = Transform3D(-0.350765, -0.231259, 0.907459, -0.109688, 0.972504, 0.205436, -0.930017, -0.0274777, -0.366487, 1.10128, 1.20061, -0.742527)
 shape = SubResource("SphereShape3D_bx7xw")
 
 [node name="manu" parent="Personaje 1/Area3D" instance=ExtResource("3_aumme")]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
 
 [node name="CASA" parent="." instance=ExtResource("4_dy6kp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13262, 0, 1.33672)
