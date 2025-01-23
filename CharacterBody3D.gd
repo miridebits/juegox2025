@@ -14,15 +14,15 @@ func _physics_process(delta):
 
 	# Movimientos de acuerdo a las teclas que definimos
 	if Input.is_action_pressed("move_right"):
-		direction.x += 1
+		direction.x += 0.5
 	if Input.is_action_pressed("move_left"):
-		direction.x -= 1
+		direction.x -= 0.5
 	if Input.is_action_pressed("move_back"):
 		# Notice how we are working with the vector's x and z axes.
 		# In 3D, the XZ plane is the ground plane.
-		direction.z += 1
+		direction.z += 0.5
 	if Input.is_action_pressed("move_forward"):
-		direction.z -= 1
+		direction.z -= 0.5
 	
 	
 	#Por si aprieta dos teclas al mismo tiempo CORREGIR
