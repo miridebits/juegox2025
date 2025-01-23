@@ -25,15 +25,15 @@ directories/dch_directory={
 "Burbuja": "res://Burbuja.dch",
 "Manu": "res://Manu.dch",
 "Personaje principal": "res://Personaje principal.dch",
-"Timelines Dialogos Juego/Burbuja": "res://Timelines Dialogos Juego/Burbuja.dch",
-"Timelines Dialogos Juego/Chica de los chisitos": "res://Timelines Dialogos Juego/Chica de los chisitos.dch",
-"Timelines Dialogos Juego/Manu": "res://Timelines Dialogos Juego/Manu.dch",
-"Timelines Dialogos Juego/Narradora": "res://Timelines Dialogos Juego/Narradora.dch",
+"Timelines Dialogos Juego/Burbuja": "res://Burbuja.dch",
+"Timelines Dialogos Juego/Chica de los chisitos": "res://Chica de los chisitos.dch",
+"Timelines Dialogos Juego/Manu": "res://Manu.dch",
+"Timelines Dialogos Juego/Narradora": "res://Narradora.dch",
 "burbuja": "res://burbuja.dch"
 }
 directories/dtl_directory={
-"Timelines Dialogos Juego/MANU DECISIÓN": "res://Timelines Dialogos Juego/MANU DECISIÓN.dtl",
-"Timelines Dialogos Juego/MANU INTRO": "res://Timelines Dialogos Juego/MANU INTRO.dtl",
+"Timelines Dialogos Juego/MANU DECISIÓN": "res://MANU DECISIÓN.dtl",
+"Timelines Dialogos Juego/MANU INTRO": "res://MANU INTRO.dtl",
 "continuar": "res://continuar.dtl",
 "escena1": "res://escena1.dtl"
 }

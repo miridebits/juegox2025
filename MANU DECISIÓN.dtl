@@ -63,6 +63,7 @@ Manu: ¿Para qué tengo cuerpo si no me hace caso? [pause=0.5]
 	set {decisión} = "elige"
 	set {valdes1} = 1
 	set {sangre} = true
+	
 	if {decisión} == "elige":
 Burbuja: ¿No deberíamos hacer algo? [pause = 0.2]
 - Ayudar a Manu a tomar una decisión

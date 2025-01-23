@@ -4,12 +4,18 @@ extends CharacterBody3D
 @export var speed = 14
 # The downward acceleration when in the air, in meters per second squared.
 @export var fall_acceleration = 75
+# Sensibilidad de rotación para el mouse
+@export var mouse_sensitivity = 0.003
+
 # Combina velocidad con una dirección
 var target_velocity = Vector3.ZERO
 
+# Para rotación del personaje basado en el mouse
+var yaw = 0.0
+
 # Para calcular los movimientos
 func _physics_process(delta):
-	# We create a local variable to store the input direction.
+	# Movimientos del personaje según teclas
 	var direction = Vector3.ZERO
 
 	# Movimientos de acuerdo a las teclas que definimos
@@ -18,28 +24,37 @@ func _physics_process(delta):
 	if Input.is_action_pressed("move_left"):
 		direction.x -= 0.5
 	if Input.is_action_pressed("move_back"):
-		# Notice how we are working with the vector's x and z axes.
-		# In 3D, the XZ plane is the ground plane.
 		direction.z += 0.5
 	if Input.is_action_pressed("move_forward"):
 		direction.z -= 0.5
-	
-	
-	#Por si aprieta dos teclas al mismo tiempo CORREGIR
-	
-	#if direction != Vector3.ZERO:
-			#direction = direction.normalized()
-			# Setting the basis property will affect the rotation of the node.
-			#$Pivot.basis = Basis.looking_at(direction)
 
 	# Ground Velocity
 	target_velocity.x = direction.x * speed
 	target_velocity.z = direction.z * speed
 
 	# Vertical Velocity
-	if not is_on_floor(): # If in the air, fall towards the floor. Literally gravity
-		target_velocity.y = target_velocity.y - (fall_acceleration * delta)
+	if not is_on_floor(): # Si está en el aire, aplicar gravedad
+		target_velocity.y -= fall_acceleration * delta
 
-	# Moving the Character
+	# Mover el personaje
 	velocity = target_velocity
 	move_and_slide()
+
+	# Actualizar la rotación del personaje basado en el mouse
+	_update_rotation_from_mouse(delta)
+
+
+# Rotación del personaje según el movimiento del mouse
+func _input(event):
+	if event is InputEventMouseMotion:
+		# Yaw (rotación horizontal) con el movimiento en el eje X del mouse
+		yaw -= event.relative.x * mouse_sensitivity
+
+# Esta función se encarga de aplicar la rotación calculada
+func _update_rotation_from_mouse(delta):
+	# Crear una rotación para el personaje usando yaw (rotación Y)
+	var rotation = Basis()
+	rotation = rotation.rotated(Vector3.UP, yaw)
+	
+	# Aplicar la rotación al nodo
+	$Camera3D.basis = rotation
