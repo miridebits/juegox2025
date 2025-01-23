@@ -22,18 +22,18 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"Burbuja": "res://luz/Timelines Dialogos Juego/Burbuja.dch",
-"Chica de los chisitos": "res://luz/Timelines Dialogos Juego/Chica de los chisitos.dch",
-"Manu": "res://luz/Timelines Dialogos Juego/Manu.dch",
-"Narradora": "res://luz/Timelines Dialogos Juego/Narradora.dch",
 "Personaje 1": "res://Personaje 1.dch",
 "Personaje principal": "res://Personaje principal.dch",
+"Timelines Dialogos Juego/Burbuja": "res://Timelines Dialogos Juego/Burbuja.dch",
+"Timelines Dialogos Juego/Chica de los chisitos": "res://Timelines Dialogos Juego/Chica de los chisitos.dch",
+"Timelines Dialogos Juego/Manu": "res://Timelines Dialogos Juego/Manu.dch",
+"Timelines Dialogos Juego/Narradora": "res://Timelines Dialogos Juego/Narradora.dch",
 "burbuja": "res://burbuja.dch",
 "personaje 2": "res://personaje 2.dch"
 }
 directories/dtl_directory={
-"MANU DECISIÓN": "res://luz/Timelines Dialogos Juego/MANU DECISIÓN.dtl",
-"MANU INTRO": "res://luz/Timelines Dialogos Juego/MANU INTRO.dtl",
+"Timelines Dialogos Juego/MANU DECISIÓN": "res://Timelines Dialogos Juego/MANU DECISIÓN.dtl",
+"Timelines Dialogos Juego/MANU INTRO": "res://Timelines Dialogos Juego/MANU INTRO.dtl",
 "continuar": "res://continuar.dtl",
 "escena1": "res://escena1.dtl"
 }
@@ -57,6 +57,10 @@ choices/reveal_by_input=false
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
+glossary/default_case_sensitive=true
+layout/style_list=[]
+layout/default_style="Default"
+variables={}
 
 [editor_plugins]
 
