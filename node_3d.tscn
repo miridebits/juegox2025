@@ -2,8 +2,9 @@
 
 [ext_resource type="Script" path="res://CharacterBody3D.gd" id="1_h7p4s"]
 [ext_resource type="Script" path="res://Personaje 1.gd" id="2_racle"]
-[ext_resource type="PackedScene" path="res://mariela.glb" id="3_aumme"]
+[ext_resource type="PackedScene" uid="uid://ox0rgk670k0u" path="res://manu.glb" id="3_aumme"]
 [ext_resource type="PackedScene" uid="uid://bod7gmjxf1msp" path="res://CASA.glb" id="4_dy6kp"]
+
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ryngb"]
 
