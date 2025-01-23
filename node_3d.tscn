@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cfm45yomcp1n4"]
+[gd_scene load_steps=16 format=3 uid="uid://cfm45yomcp1n4"]
 
 [ext_resource type="Script" path="res://CharacterBody3D.gd" id="1_h7p4s"]
 [ext_resource type="Script" path="res://base.gd" id="1_pbv5a"]
@@ -8,6 +8,9 @@
 [ext_resource type="Script" path="res://SofiaV.gd" id="5_3iwx2"]
 [ext_resource type="Script" path="res://Penta.gd" id="6_gut4j"]
 [ext_resource type="Script" path="res://Corina.gd" id="7_ckl36"]
+[ext_resource type="PackedScene" uid="uid://mmwo0uyd6ol7" path="res://penta.glb" id="9_o7k0h"]
+[ext_resource type="PackedScene" uid="uid://4tfuha2llpt0" path="res://sofia v.glb" id="10_4xmcd"]
+[ext_resource type="PackedScene" uid="uid://cxbiddwg0plwn" path="res://corina.glb" id="11_q8eb2"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ryngb"]
 
@@ -52,7 +55,7 @@ transform = Transform3D(-0.350765, -0.231259, 0.907459, -0.109688, 0.972504, 0.2
 shape = SubResource("SphereShape3D_bx7xw")
 
 [node name="manu" parent="Manu/Area3D" instance=ExtResource("3_aumme")]
-transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, -0.0509425, 0)
 
 [node name="SofiaV" type="CharacterBody3D" parent="."]
 transform = Transform3D(-0.563958, 0, -0.825803, 0, 1, 0, 0.825803, 0, -0.563958, -6.00513, 0, -3)
@@ -107,7 +110,7 @@ shape = SubResource("SphereShape3D_bx7xw")
 transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
 
 [node name="CASA" parent="." instance=ExtResource("4_dy6kp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13262, 0, 1.33672)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13436, -0.000557729, 1.33477)
 
 [node name="Piso" type="StaticBody3D" parent="."]
 
@@ -120,3 +123,12 @@ shape = SubResource("BoxShape3D_iyx7x")
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(0.992063, 0, 0, 0, 0.992063, 0, 0, 0, 0.992063, -2.30852, 4.77818, 0)
 light_energy = 3.424
+
+[node name="penta" parent="." instance=ExtResource("9_o7k0h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.190246, 0.5, 2.44001)
+
+[node name="sofia v" parent="." instance=ExtResource("10_4xmcd")]
+transform = Transform3D(-0.889025, 0, 0.457858, 0, 1, 0, -0.457858, 0, -0.889025, -3.86372, -0.0616464, -3.15297)
+
+[node name="corina2" parent="." instance=ExtResource("11_q8eb2")]
+transform = Transform3D(-0.692282, 0, 0.721627, 0, 1, 0, -0.721627, 0, -0.692282, -4.77442, -0.0215279, 2.56148)
