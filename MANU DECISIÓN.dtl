@@ -2,7 +2,7 @@ Manu: Funcionen, ¡funcionen!
 Manu: ¿Para qué tengo cuerpo si no me hace caso? [pause=0.5]
 - "¿Estás bien?"
 	Narradora: ¿Estás bien, Manu?
-	Manu: En lo más mínimo. \
+	Manu: En lo más mínimo.\
 	Me arden los ojos, me duelen los dedos.
 	Manu: No doy más.
 	Burbuja: ¿Es tan grave?\
@@ -337,15 +337,15 @@ if {valdes1} > 2:
 	Burbuja: ¿¡PERDÓN!?
 	Narradora: No, claro. Fuiste irrespetuosa. Fuiste ingenua. ¿Por qué confiaría en vos?
 	- . . .
-		Manu: Sí, lo que suponía. Te da igual. \
-		Y eso que creí que te importaba. \
+		Manu: Sí, lo que suponía. Te da igual.\
+		Y eso que creí que te importaba.\
 		Cuando me hablaste del dibujo...
 		Narradora: No sé qué decir..
 		Manu: No digas nada. Sólo no cierres la puerta cuando salgas.
 		Sentís que podrías haberla convencido. Que estuviste cerca de hacerlo. ¿En qué fallaste? ¿Por qué? ¿Cuántas veces has fallado antes?
 	- . . .
-		Manu: Sí, lo que suponía. Te da igual. \\
-		Y eso que creí que te importaba. \\
+		Manu: Sí, lo que suponía. Te da igual. \
+		Y eso que creí que te importaba.\
 		Cuando me hablaste del dibujo...
 		Narradora: No sé qué decir..
 		Manu: No digas nada. Sólo no cierres la puerta cuando salgas.
@@ -405,8 +405,8 @@ elif {valdes1} < 1:
 	Te sorprendés. No esperabas que aceptara tan rápido.
 	Narradora: ¿Puedo preguntarte por qué?
 	Manu: Esas son preguntas que me hacen querer no hacerles caso, pero te voy a decir igual. \
-	Me diste confianza. Me hablaste bien casi siempre. Eso me gusta.\
-	Manu\: Así que voy a decidir confiar en vos.
+	Me diste confianza. Me hablaste bien casi siempre. Eso me gusta.
+	Manu: Así que voy a decidir confiar en vos.
 	Narradora: Podrías estar poniendo tu vida en mis manos...
 	Manu hace una mueca, como diciendo "¿qué me importa?"
 	Manu: Algún día iba a tener que poner mi vida en las manos de alguien.

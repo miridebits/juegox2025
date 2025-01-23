@@ -22,18 +22,18 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"Burbuja": "res://Burbuja.dch",
+"Chica de los chisitos": "res://Chica de los chisitos.dch",
+"Manu": "res://Manu.dch",
+"Narradora": "res://Narradora.dch",
 "Personaje 1": "res://Personaje 1.dch",
 "Personaje principal": "res://Personaje principal.dch",
-"Timelines Dialogos Juego/Burbuja": "res://Timelines Dialogos Juego/Burbuja.dch",
-"Timelines Dialogos Juego/Chica de los chisitos": "res://Timelines Dialogos Juego/Chica de los chisitos.dch",
-"Timelines Dialogos Juego/Manu": "res://Timelines Dialogos Juego/Manu.dch",
-"Timelines Dialogos Juego/Narradora": "res://Timelines Dialogos Juego/Narradora.dch",
 "burbuja": "res://burbuja.dch",
 "personaje 2": "res://personaje 2.dch"
 }
 directories/dtl_directory={
-"Timelines Dialogos Juego/MANU DECISIÓN": "res://Timelines Dialogos Juego/MANU DECISIÓN.dtl",
-"Timelines Dialogos Juego/MANU INTRO": "res://Timelines Dialogos Juego/MANU INTRO.dtl",
+"MANU DECISIÓN": "res://MANU DECISIÓN.dtl",
+"MANU INTRO": "res://MANU INTRO.dtl",
 "continuar": "res://continuar.dtl",
 "escena1": "res://escena1.dtl"
 }
