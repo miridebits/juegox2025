@@ -35,7 +35,7 @@ func _on_body_exited(body):
 			player_in_range = false
 			print("El jugador ha salido del rango de interacción")
 
-func _process(delta):
+func _process(_delta):
 	# Verificar si el jugador está en rango y presiona la tecla de interacción
 	if player_in_range and Input.is_action_just_pressed("interact") and global.introducciones == 4:
 		interact()
