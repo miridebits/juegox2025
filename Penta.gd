@@ -1,31 +1,46 @@
 extends CharacterBody3D
 
+#Penta
 
-const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
+var player_in_range = false
+var repeticion = true
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+# Función que se ejecuta cuando el nodo está listo en la escena
+func _ready():
+	#Creo la variable de la ruta
+	var area = $Area3D 
+	area.connect("body_entered", Callable(self, "_on_body_entered"))  # Conectas la señal a la función
+	area.connect("body_exited", Callable(self, "_on_body_exited"))  # Conectas la señal a la función
 
+# Esta función se llama cuando otro cuerpo entra en el área de proximidad
+func _on_body_entered(body):
+	# Verificamos que el cuerpo que entra es el jugador.
+	if body is CharacterBody3D:  # Cambia esto si es un nodo específico (como la puerta)
+		if body.name == "Penta":
+			player_in_range = true
+			print("El jugador ha entrado en el rango de interacción")
+			if repeticion:
+				Dialogic.start("Timelines Dialogos Juego/MANU INTRO")
+				global.introducciones += 1
+				repeticion = false
+			if global.introducciones == 4:
+				Dialogic.start("contiue")
+			pass
 
-func _physics_process(delta):
-	# Add the gravity.
-	if not is_on_floor():
-		velocity.y -= gravity * delta
+# Esta función se llama cuando otro cuerpo sale del área de proximidad
+func _on_body_exited(body):
+	# Verificamos que el cuerpo que sale es el jugador.
+	if body is CharacterBody3D:  # Cambia esto si es un nodo específico
+		if body.name == "Penta":
+			player_in_range = false
+			print("El jugador ha salido del rango de interacción")
 
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+func _process(delta):
+	# Verificar si el jugador está en rango y presiona la tecla de interacción
+	if player_in_range and Input.is_action_just_pressed("interact") and global.introducciones == 4:
+		interact()
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
-
-	move_and_slide()
+# Función para manejar la interacción
+func interact():
+	# Aquí va lo que sucederá cuando el jugador presione la tecla de interacción (E)
+	Dialogic.start("Timelines Dialogos Juego/MANU DECISIÓN")

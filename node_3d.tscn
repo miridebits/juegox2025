@@ -63,51 +63,41 @@ script = ExtResource("5_3iwx2")
 
 [node name="Area3D" type="Area3D" parent="SofiaV"]
 transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
-visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SofiaV/Area3D"]
 transform = Transform3D(-0.350765, -0.231259, 0.907459, -0.109688, 0.972504, 0.205436, -0.930017, -0.0274777, -0.366487, 1.10128, 1.20061, -0.742527)
-visible = false
 shape = SubResource("SphereShape3D_bx7xw")
 
-[node name="manu" parent="SofiaV/Area3D" instance=ExtResource("3_aumme")]
-transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
-visible = false
+[node name="sofia v" parent="SofiaV/Area3D" instance=ExtResource("10_4xmcd")]
+transform = Transform3D(0.123272, 0, -0.992373, 0, 1, 0, 0.992373, 0, 0.123272, -1.33399, -0.0616464, -1.68212)
 
 [node name="Penta" type="CharacterBody3D" parent="."]
 transform = Transform3D(-0.563958, 0, -0.825803, 0, 1, 0, 0.825803, 0, -0.563958, -6.00513, 0, -3)
-visible = false
 script = ExtResource("6_gut4j")
 
 [node name="Area3D" type="Area3D" parent="Penta"]
 transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
-visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Penta/Area3D"]
 transform = Transform3D(-0.350765, -0.231259, 0.907459, -0.109688, 0.972504, 0.205436, -0.930017, -0.0274777, -0.366487, 1.10128, 1.20061, -0.742527)
-visible = false
 shape = SubResource("SphereShape3D_bx7xw")
 
-[node name="manu" parent="Penta/Area3D" instance=ExtResource("3_aumme")]
-transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
-visible = false
+[node name="penta" parent="Penta/Area3D" instance=ExtResource("9_o7k0h")]
+transform = Transform3D(-0.563958, 0, 0.825804, 0, 1, 0, -0.825804, 0, -0.563958, 0.998445, 0.5, -8.1841)
 
 [node name="Corina" type="CharacterBody3D" parent="."]
 transform = Transform3D(-0.563958, 0, -0.825803, 0, 1, 0, 0.825803, 0, -0.563958, -6.00513, 0, -3)
-visible = false
 script = ExtResource("7_ckl36")
 
 [node name="Area3D" type="Area3D" parent="Corina"]
 transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
-visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Corina/Area3D"]
 transform = Transform3D(-0.350765, -0.231259, 0.907459, -0.109688, 0.972504, 0.205436, -0.930017, -0.0274777, -0.366487, 1.10128, 1.20061, -0.742527)
-visible = false
 shape = SubResource("SphereShape3D_bx7xw")
 
-[node name="manu" parent="Corina/Area3D" instance=ExtResource("3_aumme")]
-transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
+[node name="corina2" parent="Corina/Area3D" instance=ExtResource("11_q8eb2")]
+transform = Transform3D(-0.205504, 0, -0.978657, 0, 1, 0, 0.978657, 0, -0.205504, 3.89862, -0.0215279, -4.15277)
 
 [node name="CASA" parent="." instance=ExtResource("4_dy6kp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13436, -0.000557729, 1.33477)
@@ -123,12 +113,3 @@ shape = SubResource("BoxShape3D_iyx7x")
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(0.992063, 0, 0, 0, 0.992063, 0, 0, 0, 0.992063, -2.30852, 4.77818, 0)
 light_energy = 3.424
-
-[node name="penta" parent="." instance=ExtResource("9_o7k0h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.190246, 0.5, 2.44001)
-
-[node name="sofia v" parent="." instance=ExtResource("10_4xmcd")]
-transform = Transform3D(-0.889025, 0, 0.457858, 0, 1, 0, -0.457858, 0, -0.889025, -3.86372, -0.0616464, -3.15297)
-
-[node name="corina2" parent="." instance=ExtResource("11_q8eb2")]
-transform = Transform3D(-0.692282, 0, 0.721627, 0, 1, 0, -0.721627, 0, -0.692282, -4.77442, -0.0215279, 2.56148)
