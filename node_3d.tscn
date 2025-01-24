@@ -61,7 +61,7 @@ visible = false
 shape = SubResource("SphereShape3D_bx7xw")
 
 [node name="sofia v" parent="SofiaV/Area3D" instance=ExtResource("10_4xmcd")]
-transform = Transform3D(0.123272, 0, -0.992373, 0, 1, 0, 0.992373, 0, 0.123272, -1.33399, -0.0616464, -1.68212)
+transform = Transform3D(0.123272, 0, -0.992373, 0, 1, 0, 0.992373, 0, 0.123272, -2.32198, -0.0616464, 0.365996)
 
 [node name="Penta" type="CharacterBody3D" parent="."]
 transform = Transform3D(-0.563958, 0, -0.825803, 0, 1, 0, 0.825803, 0, -0.563958, -6.00513, 0, -3)
@@ -104,5 +104,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13436, -0.000557729, 1.3347
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(0.992063, 0, 0, 0, 0.992063, 0, 0, 0, 0.992063, -3.07071, 4.77818, 0)
+visible = false
 light_energy = 3.424
 omni_range = 14.7187
