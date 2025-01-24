@@ -35,13 +35,13 @@ script = ExtResource("1_h7p4s")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9505, 0)
 mesh = SubResource("CapsuleMesh_ryngb")
 
+[node name="Camera3D" type="Camera3D" parent="Personaje principal/MeshInstance3D"]
+transform = Transform3D(0.992063, 0, 0, 0, 0.991922, 0.0167253, 0, -0.0167253, 0.991922, 0, 0.027464, -0.588502)
+fov = 134.3
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Personaje principal"]
 transform = Transform3D(0.490556, 0, 0, 0, 0.6885, 0, 0, 0, 0.6885, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_nwhqf")
-
-[node name="Camera3D" type="Camera3D" parent="Personaje principal"]
-transform = Transform3D(0.992064, 0, 0, 0, 0.991923, 0.0167253, 0, -0.0167253, 0.991923, 0, 1.55573, -0.598163)
-fov = 134.3
 
 [node name="Manu" type="CharacterBody3D" parent="."]
 transform = Transform3D(-0.563958, 0, -0.825803, 0, 1, 0, 0.825803, 0, -0.563958, -6.00513, 0, -3)

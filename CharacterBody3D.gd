@@ -57,4 +57,4 @@ func _update_rotation_from_mouse(delta):
 	rotation = rotation.rotated(Vector3.UP, yaw)
 	
 	# Aplicar la rotación al nodo
-	$Camera3D.basis = rotation
+	$MeshInstance3D.basis = rotation
