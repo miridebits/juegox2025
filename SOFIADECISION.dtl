@@ -73,6 +73,19 @@ jump options
 label options
 ¿Qué hacés?
 - Preguntarle por su familia | [if {SofiaV.familia_on} == false]
+	jump familia
+	[end_timeline]
+- Preguntarle por sus hobbies
+	jump hobbies
+	[end_timeline]
+- Molestarla | [if {SofiaV.omo1} == false or {SofiaV.omo2} == false or {SofiaV.omo3} == false or {SofiaV.omo4} == false or {SofiaV.omo5} == false]
+	jump molestarla
+	[end_timeline]
+- Tomar una decisión
+	jump decision
+	[end_timeline]
+	
+label familia
 	set {SofiaV.puntajeresp} += 0.5
 	Narradora: Contanos de tu familia, Sofi.
 	if {SofiaV.familia} == true:
@@ -182,9 +195,9 @@ label options
 				- Dejar de ayudarla
 						jump badending
 						[end_timeline]
-- Preguntarle por sus hobbies
+label hobbies
 	Narradora: ¿Qué hacés para divertirte, Sofi?
-- Molestarla | [if {SofiaV.omo1} == false or {SofiaV.omo2} == false or {SofiaV.omo3} == false or {SofiaV.omo4} == false or {SofiaV.omo5} == false]
+label molestarla
 	label randomnumber
 	set {random_sof} = range(1,6).pick_random()
 	if {random_sof} == 1:
@@ -252,7 +265,7 @@ label options
 		else:
 			jump randomnumber
 			[end_timeline]
-- Tomar una decisión
+label decision
 	if {SofiaV.valsof} < 3:
 		if {SofiaV.negative_r_sof} == true:
 			¡Ya sé qué hacer!

@@ -23,8 +23,8 @@ Me traicionan la postura, las articulaciones, los órganos.
 	Manu: Exactamente. Si dejo de usar la computadora mi cuerpo sanará, pero no seré tan feliz como hoy.
 	Pop se agita en tu mano, como llamándote la atención.
 	Burbuja: Che, me preocupa esto.
-	set {decisión} = "elige"
-	set {valdes1} = -1
+	set {MANU.decisión} = "elige"
+	set {MANU.valdes1} = -1
 - "No es tan grave"
 	Narradora: Dale, Manu. No es tan grave.
 	Manu: No sé si es grave o no, pero no puedo dormir tranquila.
@@ -41,8 +41,8 @@ Me traicionan la postura, las articulaciones, los órganos.
 	Burbuja: Hm. Estás es un punto de inflexión, ¿no?
 	Manu: No sé qué significa eso. Pero no doy más, y tengo que hacer algo.
 	Manu te mira, como rogándote piedad. Mirás a Pop, quien entiende la situación inmediatamente.
-	set {valdes1} = 2
-	set {decisión} = "elige"
+	set {MANU.valdes1} = 2
+	set {MANU.decisión} = "elige"
 - Buscar por pistas en la pieza
 	Las pantallas, prendidas y con luz intensa, te cegan en un primer instante, pero seguís viendo. Los múltiples teclados parecen gastados, y detectás manchas de sangre seca sobre algunos. Mirás a Manu y las señalás.
 	Narradora: ¿Y eso?
@@ -61,20 +61,20 @@ Me traicionan la postura, las articulaciones, los órganos.
 	Manu: O confío en que mi corazón encontrará una solución y dejo que mi cuerpo se pudra.
 	Burbuja: Wow. Ese sí es un dilema.
 	Pop se agita en tu mano, como con pena.
-	set {decisión} = "elige"
-	set {valdes1} = 1
-	set {sangre} = true
+	set {MANU.decisión} = "elige"
+	set {MANU.valdes1} = 1
+	set {MANU.sangre} = true
 	
-	if {decisión} == "elige":
+	if {MANU.decisión} == "elige":
 Burbuja: ¿No deberíamos hacer algo? [pause = 0.2]
 - Ayudar a Manu a tomar una decisión
 	Narradora: Voy a ayudarte, Manu. Quiero que tomes esa decisión.
 	Los ojos de manu parecen brillar esperanzados.
-	set {valdes2} = 1
+	set {MANU.valdes2} = 1
 label objetivo
 ¿Qué hacés?
-if {valdes2} == 1:
-	- Preguntarle por sus intereses | [if {valpreg} != 0.5 && {valpreg} != 1.5]
+if {MANU.valdes2} == 1:
+	- Preguntarle por sus intereses | [if {MANU.valpreg} != 0.5 && {MANU.valpreg} != 1.5]
 		Narradora: ¿Por qué te gusta tanto usar la computadora?
 		Manu: Me hace sentir segura, a salvo. Es una pequeña caja donde todo está bien.
 		Narradora: ¿Hay algo que te guste además de la computadora?
@@ -102,64 +102,64 @@ if {valdes2} == 1:
 						Los ojos de Manu se iluminan, pero luego aparta la mirada.
 						Manu: Sí, qué se yo. Cambiemos de tema.
 						Burbuja: ¡Ey! ¿Qué nos estás ocultando?
-						set {dibujo} = true
-						set {valdes1} -= 1
-						set {valpreg} += 0.5
+						set {MANU.dibujo} = true
+						set {MANU.valdes1} -= 1
+						set {MANU.valpreg} += 0.5
 						jump objetivo
 					- "Deberías ver animé"
 						Narradora: ¿Sabés que deberías hacer? Empezar a ver el animé de ese personaje.
 						Manu te mira extrañada.
 						Manu: No, gracias. No veo dibujitos.
-						if {valpreg} == 0:
+						if {MANU.valpreg} == 0:
 							¡Tenemos que cambiar de estrategia! A este paso, nunca vamos a ayudarla.
-							set {valpreg} += 0.5
+							set {MANU.valpreg} += 0.5
 							jump objetivo
 						else:
 							Burbuja: Uf... no podemos preguntarle más nada. Está cahsada.
 							Pop tiene razón. Manu no parece dispuesta a seguir hablando.
-							set {valpreg} += 0.5
+							set {MANU.valpreg} += 0.5
 							jump objetivo
 					- "Deberías producir una serie animada"
 						Narradora: ¡Deberías armar una serie! Animarla, programarla, y todo eso que sabés hacer vos. ¿No te parece buena idea?
 						Manu: No. Es imposible, y no me interesa.
 						Narradora: ¿Estás segura? Podría...
 						Manu: No voy a ponerme a armar una serie animada de cero, amiga. Todo bien.
-						if {valpreg} == 0:
+						if {MANU.valpreg} == 0:
 							Burbuja: ¡La estamos estresando! Cambiemos de estrategia.
-							set {valpreg} += 0.5
-							set {valdes1} += 1
+							set {MANU.valpreg} += 0.5
+							set {MANU.valdes1} += 1
 							jump objetivo
 						else:
 							Burbuja: No tiene sentido seguir preguntándole nada. Está frustrada.
 							Pop tiene razón. Manu no parece interesada en seguir hablando...
-						set {valdes1} += 2
-						set {valpreg} += 0.5
+						set {MANU.valdes1} += 2
+						set {MANU.valpreg} += 0.5
 						jump objetivo
 				- "¿Te gusta el animé?"
 					Manu sacude la cabeza frenéticamente.
 					Manu: No veo muchas series. El animé tampoco me interesa.
 					Narradora: Ah, okay....
-					if {valpreg} == 0:
+					if {MANU.valpreg} == 0:
 						Burbuja: Cambiemos de tema. La estamos aburriendo.
-						set {valpreg} += 0.5
+						set {MANU.valpreg} += 0.5
 						jump objetivo
 					else:
 						Burbuja: Llegamos a un punto muerto. No tiene sentido seguir hablando.
 						Pop tiene razón. Manu parece aburrida.
-						set {valpreg} += 0.5
+						set {MANU.valpreg} += 0.5
 						jump objetivo
 				- "¿Te gustan los stickers?"
 					Manu alza una ceja.
 					Manu: Qué pregunta extraña. ¿La hiciste porque viste el sticker en la pared? Si no querés hablar más, podés decirme. No hace falta que me entretengas con charla.
 					Burbuja: ¡No queremos hacer eso, Manu!
 					Manu: Parece que sí. Si me gustan los stickers... qué pregunta tonta.
-					if {valpreg} == 0:
+					if {MANU.valpreg} == 0:
 						Burbuja: Cambiemos de estrategia, che. Esto no está funcionando.
 					else:
 						Burbuja: Claramente no quiere seguir hablando. Dejémoslo así.
 						Es cierto, Manu no parece muy interesada en seguir con la conversación. Es momento de tomar una decisión.
-					set {valdes1} += 1
-					set {valpreg} += 0.5
+					set {MANU.valdes1} += 1
+					set {MANU.valpreg} += 0.5
 					jump objetivo
 		- "¡Salgamos de esta pieza!"
 			Narradora: Tengo una idea. ¡Salgamos de esta pieza!
@@ -171,10 +171,10 @@ if {valdes2} == 1:
 				Mirás a Manu cabizbaja. Ella parece entender que no vas a ayudarla.
 				jump badending
 			- Seguir intentándolo
-				set {valpreg} += 0.5
-				set {valdes1} += 2
+				set {MANU.valpreg} += 0.5
+				set {MANU.valdes1} += 2
 				jump objetivo
-	- Preguntarle por sus obligaciones | [if {valpreg} < 1]
+	- Preguntarle por sus obligaciones | [if {MANU.valpreg} < 1]
 		Narradora: ¿Hay alguna razón particular por la que usás la computadora? ¿Alguna necesidad que tengas?
 		Manu: No realmente. Es puro placer. Si el placer es necesidad, entonces sí.
 		Manu: Bueno, nunca me había planteado eso.
@@ -189,30 +189,30 @@ if {valdes2} == 1:
 				Burbuja: ¿Cómo? ¡Ella te está diciendo la verdad! ¿Por qué te mentiría?}
 				Manu: Porque yo, sintiéndome mal, sobrevivo.
 				La sala se plaga de un silencio incómodo. [pause = 1.5]
-				if {valpreg} == 0:
+				if {MANU.valpreg} == 0:
 					Burbuja: Bueno, mejor cambiemos de tema.
-					set {valpreg} += 1
-					set {valdes1} += 2
+					set {MANU.valpreg} += 1
+					set {MANU.valdes1} += 2
 					jump objetivo
 				else:
 					Manu: No parece muy animada a seguir hablando. Mejor dejémoslo así, aunque sea incómodo.
-					set {valdes1} += 2
-					set {valpreg} += 1
+					set {MANU.valdes1} += 2
+					set {MANU.valpreg} += 1
 					jump objetivo
 			- "A duras penas"
 				Narradora: Sobreviven a duras penas, con vidas tristes y deplorables.
 				Manu: Sabés mucho del tema, eh. ¿Sos triste y deplorable vos también?
 				Burbuja: ¿¡PERDÓN!?
 				Manu: Era sólo una observación. No creo que esas vidas sean miserables. Sólo un poco peores.
-				if {valpreg} == 0:
+				if {MANU.valpreg} == 0:
 					Burbuja: Cambiemos de tema, por favor. Me está estresando.
-					set {valpreg} += 1
-					ser {valdes1} += 1
+					set {MANU.valpreg} += 1
+					ser {MANU.valdes1} += 1
 					jump objetivo
 				else:
 					Dejémoslo acá. Ya tenemos suficiente información.
-					set {valpreg} += 1
-					set {valdes1} += 1
+					set {MANU.valpreg} += 1
+					set {MANU.valdes1} += 1
 					jump objetivo
 		- "No"
 			Narradora: No, el placer no es una necesidad para la supervivencia. Se puede vivir sin placer.
@@ -221,41 +221,41 @@ if {valdes2} == 1:
 				Narradora: ¿No creés que hay algo después de la supervivencia? ¿Un mundo de ensueño, un paraíso, quizás?
 				Manu sonríe levemente y niega con la cabeza.
 				Manu: Ya estás flasheando. Dejémoslo acá.
-				if {valpreg} == 0:
+				if {MANU.valpreg} == 0:
 					Burbuja: ¡Qué difícil que es hablar con esta chica! Bueno, cambiemos de tema. Quizás sea más fácil.
-					set {valdes1} += 1
-					set {valpreg} += 1
+					set {MANU.valdes1} += 1
+					set {MANU.valpreg} += 1
 					jump objetivo
 				else:
 					Burbuja: ¿Qué dice? Bueno, tomemos la decisión de una buena vez. Ya me estoy hartando.
-					set {valdes1} += 1
-					set {valpreg} += 1
+					set {MANU.valdes1} += 1
+					set {MANU.valpreg} += 1
 					jump objetivo
 			- "No"
 				Narradora: No puede haber disfrute sin responsabilidad, no puede haber días felices sin días enteros, quizás menos felices.
 				Manu asiente con la cabeza lentamente.
 				Manu: Coincido, absolutamente.
-				if {valpreg} == 0:
+				if {MANU.valpreg} == 0:
 					Burbuja: Esa fue una buena respuesta. ¿Qué más podemos preguntarle?
-					set {valdes1} -= 1
-					set {valpreg} += 1
+					set {MANU.valdes1} -= 1
+					set {MANU.valpreg} += 1
 					jump objetivo
 				else:
 					Burbuja: Creo que esto era lo que necesitábamos saber. Tomemos la decisión de una buena vez.
-					set {valdes1} -= 1
-					set {valpreg} += 1
+					set {MANU.valdes1} -= 1
+					set {MANU.valpreg} += 1
 					jump objetivo
 	- Tomar una decisión
 		Narradora: Creo que ya sé qué podés hacer.
-		if {valpreg} == 0:
+		if {MANU.valpreg} == 0:
 			Manu: ¿Así, sin más? Sos medio tonta. ¿No creés que sabés muy poco sobre mí?
 			Narradora: Sí... puede ser.
-			set {valdes1} += 1
+			set {MANU.valdes1} += 1
 			jump objetivo
-		if {valpreg} == 1.5:
+		if {MANU.valpreg} == 1.5:
 			El rostro de Manu se ilumina. Confía en vos.
 			- "Dejá las computadoras"
-				set {valdes1} -= 2
+				set {MANU.valdes1} -= 2
 				Narradora: Dejá las computadoras y empezá a cuidarte, Manu.
 				Manu se ve intrigada.
 				Manu: ¿Por qué haría eso?
@@ -265,19 +265,19 @@ if {valdes2} == 1:
 					Burbuja: ¿Y, Manu? ¿Qué decís?
 					jump VEREDICTO
 				- "Por tu salud mental"
-					set {valdes1} += 2
+					set {MANU.valdes1} += 2
 					Narradora: Por tu cerebro. No deberías estar pensando tanto en la computadora. Podrías enfocarte en otras cosas.
 					Manu: Ah.
 					Manu no parece impresionada.
 					Burbuja: ¿Y, Manu? ¿Qué decís?
 					jump VEREDICTO
-				- "Porque no deberías sangrar más" | [if {sangre} == true]
+				- "Porque no deberías sangrar más" | [if {MANU.sangre} == true]
 					Narradora: Vi la sangre en tus teclados, Manu. Nadie debería sufrir así.
 					Manu abre mucho los ojos. Quizás es por la irritación, pero parecen humedecerles.
 					Manu: ¿Por qué me decís eso...?
 					Pero antes de que puedas decirle algo, te calla y se limpia las lagrimas.
 					Burbuja: ¿Y, Manu? ¿Qué decís?
-					set {valdes1} -= 1
+					set {MANU.valdes1} -= 1
 					jump VEREDICTO
 			- "Seguí usando las computadoras"
 				No te cuides, Manu. Seguí el camino que más feliz te haga.
@@ -287,16 +287,16 @@ if {valdes2} == 1:
 					Narradora: Porque sólo así vas a ser feliz. Quizás te sigas dañando, pero mientras sea un riesgo que estés dispuesta a tomar., creo que es la mejor opción.
 					Manu, pensativa, no responde.
 					Burbuja: ¿Y, Manu? ¿Qué decís?
-					set {valdes1} -= 2
+					set {MANU.valdes1} -= 2
 					jump VEREDICTO
 				- "Para entender lo que te pasa"
 					Narradora: Porque no valorás lo que tenés, no entendés lo que te pasa y no sabés lo que te falta. Necesitás...
 					Manu: No me vengas con cursilerías, por favor.
 					Mirás a Pop y mirás a Manu. Parece hasta ofendida.
 					Burbuja: ¿Y, Manu? ¿Qué decís?
-					set {valdes1} += 2
+					set {MANU.valdes1} += 2
 					jump VEREDICTO
-- "Empezá a dibujar" | [if {dibujo} == true]
+- "Empezá a dibujar" | [if {MANU.dibujo} == true]
 Empezá a dibujar, Manu. Sé que tenés ganas de hacerlo.
 Manu se sorprende-.
 Manu: ¿Por qué haría eso?
@@ -305,21 +305,21 @@ Manu: ¿Por qué haría eso?
 	Manu: Lo que realmeente quiero es seguir usando la computadora, ya te dije...
 	Narradora: Manu no parece nada convencida.
 	Burbuja: ¿Y, Manu? ¿Qué decís?
-	set {valdes1} += 2
+	set {MANU.valdes1} += 2
 	jump goodending
 - Porque es innovador
 	Narradora: Porque nunca lo hiciste. Es innovador, desafiante, peligroso. ¿No te interesa?
 	Manu no responde. Está mirándote a los ojos, pensativa.
 	Burbuja: ¿Y, Manu? ¿Qué decís?
-	set {valdes1} -= 3
+	set {MANU.valdes1} -= 3
 	jump goodending
 else:
 Manu: ¿Me preguntás una pavada y ya creés que podés ayudarme? Ni lo pienses.
 Narradora: Ah... perdón.
-set {valdes1} += 1
+set {MANU.valdes1} += 1
 jump MANU DECISIÓN/goodending
-if {valdes2} == >2:
-set {valpreg} += 1
+if {MANU.valdes2} == >2:
+set {MANU.valpreg} += 1
 
 label badending
 Manu: Ah, está bien. Váyanse. No cierren la puerta cuando salgan.
@@ -333,7 +333,7 @@ Cuando Manu aparte su mirada de vos, sentís que le fallaste gravemente. ¿A cu�
 
 
 label goodending
-if {valdes1} > 2:
+if {MANU.valdes1} > 2:
 	Manu piensa un poco, y luego alza la mirada.
 	Manu: No puedo confiar en tu opinión.
 	Burbuja: ¿¡PERDÓN!?
@@ -362,7 +362,7 @@ else:
 	Manu: Por favor, no cierren la puerta al salir.
 
 label VEREDICTO
-if {valdes1} > 2:
+if {MANU.valdes1} > 2:
 	Manu no parece estar pensándolo mucho. Como si fingiera estar pensando.
 	Narradora: ¿Está todo bien?
 	Manu: ¿Eh? Sí, claro. Simplemente no te voy a dar bola.
@@ -373,7 +373,7 @@ if {valdes1} > 2:
 	Manu: Cerrá la puerta antes de irte.
 	La conversación con Manu te deja un sabor amargo en la boca. ¿Qué fue lo que hiciste mal?
 	
-	elif {valdes1} == 1 or == 2:
+	elif {MANU.valdes1} == 1 or == 2:
 	Manu parece estar pensándolo, pero no puede decidirse.
 	Burbuja: ¿Qué pasa?
 	Manu: No sé si puedo confiar en ustedes.
@@ -401,7 +401,7 @@ if {valdes1} > 2:
 		Manu, podés ver, quiere sonreír pero no puede.
 		Manu: Por favor, no cierren la puerta cuando se vayan.
 		Te hubiera gustado verla sonreír.
-elif {valdes1} < 1:
+elif {MANU.valdes1} < 1:
 	Manu piensa un poco y asiente.
 	Manu: Está bien. Voy a hacerles caso.
 	Te sorprendés. No esperabas que aceptara tan rápido.
