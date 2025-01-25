@@ -72,6 +72,7 @@ layout/style_list=[]
 layout/default_style="Default"
 variables={
 "Folder": {},
+"MANU": {
 "Return": "inicio",
 "VEREDICTO": "veredicto",
 "decisión": "inicio",
@@ -80,7 +81,24 @@ variables={
 "valdes1": 0,
 "valdes2": 0,
 "valpreg": 0.0
+},
+"SofiaV": {
+"cocina": false,
+"familia": false,
+"familia_on": false,
+"negative_r_sof": false,
+"omo1": false,
+"omo2": false,
+"omo3": false,
+"omo4": false,
+"omo5": false,
+"puntajeresp": 0.0,
+"random_sof": 0,
+"valsof": 0
 }
+}
+portraits/default_portrait=""
+save/autosave=false
 
 [editor_plugins]
 
