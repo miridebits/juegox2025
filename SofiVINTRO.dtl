@@ -1,0 +1,41 @@
+Burbuja: Hace bastante que no se lavan estos trastes, eh...
+Burbuja: ¿Eh? ¿Qué hace una estrella de mar acá?
+"Estrella de mar (1)": ¿Qué hay de malo con una estrella de mal chef?
+- "Sos muy petisa"
+	Narradora: Seguro ni alcanzás a la barra, ¿qué me asegura que tu comida es de calidad?
+	"Estrella de mar (1)": Que uso los mejores materiales, importados desde los sitios más reconditos del universo.
+	Burbuja: Eu, yo le creo.
+	La estrella de mar te extiende la mano.
+	"Estrella de mar (1)": Sofía Velazquez, a tu disposición.
+	SofiV: He cocinado para visires y sultanes.
+	SofiV: Para reyes y conquistadores.
+	SofiV: Para dioses y titanes.
+	label choicesofi
+	- "¿Cuándo me vas a cocinar a mí?"
+		Narradora: Y yo, ¿cuándo voy a probar tu comida?
+		SofiV: ¿Sos un visir? ¿Sos un sultán?
+		SofiV: ¿Una reina? ¿Una conquistadora? ¿Una diosa? ¿Un titán?
+		Narradora: . . . [pause = 1] No.
+		SofiV: Entonces, todavía no. Avisame cuando lo seas.
+		Burbuja: ¡Qué irritante! No le prestes atención.\
+Ya me estoy frustrando hasta yo.
+		Es cierto, parece una persona muy molesta. Sin embargo, notás en ella un dejo de incomodidad y desconformidad. ¿Qué podría estar acorralando a la cocinera de dioses?
+	- "No te creo."
+		Narradora: Eso no tiene sentido. No te creo.
+		Sofía sonríe.
+		SofiV: Porque es mentira. Felicidades, me descubriste. Me desenmascaraste. Me arrebataste lo que me vuelve yo.
+		Burbuja: Ay, reaccionó muy mal...
+		Narradora: Che, Sofi, tranqui...
+		SofiV: Por supuesto, estoy bromeando. Por eso soy la cocinera de los cielos y la buffón de las itnieblas.
+		Narradora: Ah. 	Bueno.
+		Sofi se te queda mirando, sonriendo, como satisfecha con su afirmación burlona.
+		Burbuja: Pst, vayámonos mientras podemos.
+		No podés esperar a irte.
+- "No me gustan los mariscos"
+	Narradora: No me gustan los mariscos, así que no me va a gustar lo que hagas.
+	"Estrella de mar (1)": No hay problema, porque las estrellas de mar no somos mariscos, somos etinodermos.
+	"Estrella de mar (1)": Aun así, no me vas a comer a mí.
+	"Estrella de mar (1)": Soy Sofía Velazquez, seguro escuchaste de mí.
+	SofiV: Y soy mucho más que una estrella de mar. Soy una cocinera experta, especializada en postres decorativos.
+	SofiV: Ah, y milanesas fritas.
+	jump choicesofi

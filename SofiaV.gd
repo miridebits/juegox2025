@@ -12,15 +12,18 @@ func _ready():
 	area.connect("body_entered", Callable(self, "_on_body_entered"))  # Conectas la señal a la función
 	area.connect("body_exited", Callable(self, "_on_body_exited"))  # Conectas la señal a la función
 
+func _on_dialogue_finished():
+	global.is_in_dialogue = false
 # Esta función se llama cuando otro cuerpo entra en el área de proximidad
 func _on_body_entered(body):
 	# Verificamos que el cuerpo que entra es el jugador.
 	if body is CharacterBody3D:  # Cambia esto si es un nodo específico (como la puerta)
-		if body.name == "SofiaV":
+		if body.name == "Personajeprincipal":
 			player_in_range = true
 			print("El jugador ha entrado en el rango de interacción")
 			if repeticion:
-				Dialogic.start("Timelines Dialogos Juego/MANU INTRO")
+#				global.is_in_dialogue = true
+				Dialogic.start("SofiVINTRO")#, #Callable(self, "_on_dialogue_finished"))
 				global.introducciones += 1
 				repeticion = false
 			if global.introducciones == 4:
@@ -31,11 +34,11 @@ func _on_body_entered(body):
 func _on_body_exited(body):
 	# Verificamos que el cuerpo que sale es el jugador.
 	if body is CharacterBody3D:  # Cambia esto si es un nodo específico
-		if body.name == "SofiaV":
+		if body.name == "Personajeprincipal":
 			player_in_range = false
 			print("El jugador ha salido del rango de interacción")
 
-func _process(delta):
+func _process(_delta):
 	# Verificar si el jugador está en rango y presiona la tecla de interacción
 	if player_in_range and Input.is_action_just_pressed("interact") and global.introducciones == 4:
 		interact()

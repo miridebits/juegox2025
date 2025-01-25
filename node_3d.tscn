@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cfm45yomcp1n4"]
+[gd_scene load_steps=20 format=3 uid="uid://cfm45yomcp1n4"]
 
 [ext_resource type="Script" path="res://base.gd" id="1_pbv5a"]
 [ext_resource type="Script" path="res://jugador.gd" id="2_blmu0"]
@@ -18,7 +18,16 @@
 points = PackedVector3Array(-0.125207, -0.532801, -0.480507, 0.0227831, 0.47607, 0.498884, 0.169713, 0.559144, 0.464172, 0.231051, -0.803591, 0.320455, 0.40741, 0.651043, -0.243523, -0.482789, 0.594843, 0.0822132, -0.362868, -0.682312, 0.289697, 0.469044, -0.654529, -0.0662713, -0.127444, 0.842701, -0.338103, -0.393435, -0.683942, -0.244717, 0.438255, 0.623309, 0.200849, 0.0841477, 0.977454, 0.114795, -0.0682023, -0.976458, -0.12927, 0.20055, -0.563129, -0.451454, -0.185527, 0.595453, -0.453475, -0.273363, 0.592268, 0.407754, -0.00693649, -0.476823, 0.49966, 0.375821, -0.588614, 0.316955, 0.111579, 0.563059, -0.481177, -0.41725, 0.527866, -0.270497, -0.484546, -0.596972, -0.0665097, -0.279747, 0.908561, 0.0533361, -0.250197, -0.880712, 0.205319, 0.263647, -0.902771, -0.127394, 0.293368, 0.871526, -0.157196, 0.373412, -0.526319, -0.328246, 0.499663, 0.476641, -0.00688856, 0.0531056, 0.875001, 0.324703, -0.154543, -0.590854, 0.465879, -0.0972799, -0.782358, -0.398188, -0.387649, -0.498171, 0.31565, -0.30068, -0.587995, -0.388901)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_bx7xw"]
-radius = 1.5
+radius = 1.38507
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_45qyo"]
+radius = 1.385
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_584dp"]
+radius = 1.35
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_12757"]
+radius = 1.35
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_0h68e"]
 
@@ -30,7 +39,7 @@ transform = Transform3D(1.008, 0, 0, 0, 1.008, 0, 0, 0, 1.008, -0.141683, 0, 0.7
 script = ExtResource("1_pbv5a")
 
 [node name="Personajeprincipal" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.330064, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.33, 0)
 script = ExtResource("2_blmu0")
 
 [node name="pill" type="MeshInstance3D" parent="Personajeprincipal"]
@@ -70,38 +79,36 @@ script = ExtResource("5_3iwx2")
 transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SofiaV/Area3D"]
-transform = Transform3D(-0.350765, -0.231259, 0.907459, -0.109688, 0.972504, 0.205436, -0.930017, -0.0274777, -0.366487, 1.10128, 1.20061, -0.742527)
-visible = false
-shape = SubResource("SphereShape3D_bx7xw")
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, -2.42235, 0.042043, 0.934799)
+shape = SubResource("SphereShape3D_45qyo")
 
 [node name="sofia v" parent="SofiaV/Area3D" instance=ExtResource("10_4xmcd")]
 transform = Transform3D(0.123272, 0, -0.992373, 0, 1, 0, 0.992373, 0, 0.123272, -2.32198, -0.0616464, 0.365996)
 
 [node name="Penta" type="CharacterBody3D" parent="."]
-transform = Transform3D(-0.563958, 0, -0.825803, 0, 1, 0, 0.825803, 0, -0.563958, -6.00513, 0, -3)
+transform = Transform3D(-0.563958, 0, -0.825803, 0, 1, 0, 0.825803, 0, -0.563958, -4.12807, -0.206473, -1.83043)
 script = ExtResource("6_gut4j")
 
 [node name="Area3D" type="Area3D" parent="Penta"]
 transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Penta/Area3D"]
-transform = Transform3D(-0.350765, -0.231259, 0.907459, -0.109688, 0.972504, 0.205436, -0.930017, -0.0274777, -0.366487, 1.10128, 1.20061, -0.742527)
-visible = false
-shape = SubResource("SphereShape3D_bx7xw")
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0.214042, -1.06991, -8.87218)
+shape = SubResource("SphereShape3D_584dp")
 
 [node name="penta" parent="Penta/Area3D" instance=ExtResource("9_o7k0h")]
 transform = Transform3D(-0.563958, 0, 0.825804, 0, 1, 0, -0.825804, 0, -0.563958, 0.998445, 0.5, -8.1841)
 
 [node name="Corina" type="CharacterBody3D" parent="."]
-transform = Transform3D(-0.563958, 0, -0.825803, 0, 1, 0, 0.825803, 0, -0.563958, -6.00513, 0, -3)
+transform = Transform3D(-0.563958, 0, -0.825803, 0, 1, 0, 0.825803, 0, -0.563958, -5.85229, 0.0127523, -2.45514)
 script = ExtResource("7_ckl36")
 
 [node name="Area3D" type="Area3D" parent="Corina"]
 transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Corina/Area3D"]
-transform = Transform3D(-0.350765, -0.231259, 0.907459, -0.109688, 0.972504, 0.205436, -0.930017, -0.0274777, -0.366487, 1.10128, 1.20061, -0.742527)
-shape = SubResource("SphereShape3D_bx7xw")
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 508.763, -1571.87, 744.982)
+shape = SubResource("SphereShape3D_12757")
 
 [node name="corina2" parent="Corina/Area3D" instance=ExtResource("11_q8eb2")]
 transform = Transform3D(-0.205504, 0, -0.978657, 0, 1, 0, 0.978657, 0, -0.205504, 3.89862, -0.0215279, -4.15277)

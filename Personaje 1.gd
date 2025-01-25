@@ -22,8 +22,8 @@ func _on_body_entered(body):
 			player_in_range = true
 			print("El jugador ha entrado en el rango de interacción")
 			if repeticion:
-				global.is_in_dialogue = true
-				Dialogic.start("Timelines Dialogos Juego/MANU INTRO", Callable(self, "_on_dialogue_finished"))
+#				global.is_in_dialogue = true
+				Dialogic.start("Timelines Dialogos Juego/MANU INTRO")#, #Callable(self, "_on_dialogue_finished"))
 				global.introducciones += 1
 				repeticion = false
 			if global.introducciones == 4:
