@@ -1,3 +1,4 @@
+[signal arg="signal"]
 Burbuja: Hace bastante que no se lavan estos trastes, eh...
 Burbuja: ¿Eh? ¿Qué hace una estrella de mar acá?
 "Estrella de mar (1)": ¿Qué hay de malo con una estrella de mal chef?
@@ -39,3 +40,4 @@ Ya me estoy frustrando hasta yo.
 	SofiV: Y soy mucho más que una estrella de mar. Soy una cocinera experta, especializada en postres decorativos.
 	SofiV: Ah, y milanesas fritas.
 	jump choicesofi
+[signal arg="final_signal"]

@@ -22,13 +22,14 @@ func _on_body_entered(body):
 			player_in_range = true
 			print("El jugador ha entrado en el rango de interacción")
 			if repeticion:
-#				global.is_in_dialogue = true
-				Dialogic.start("Timelines Dialogos Juego/MANU INTRO")#, #Callable(self, "_on_dialogue_finished"))
+				Dialogic.start("Timelines Dialogos Juego/MANU INTRO")
 				global.introducciones += 1
 				repeticion = false
 			if global.introducciones == 4:
 				Dialogic.start("contiue")
 			pass
+
+
 
 # Esta función se llama cuando otro cuerpo sale del área de proximidad
 func _on_body_exited(body):

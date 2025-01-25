@@ -1,3 +1,5 @@
+[signal arg="signal"]
+
 Burbuja: ¿No te da impresión?
 Narradora: ¿Qué cosa?
 Burbuja: El olor a chisitos. \
@@ -36,3 +38,4 @@ if {Return} == "option11":
 	- "¿Qué es una computadora?"
 		Manu: No podés ser tan desesperadamente desentendida.
 	Me das pena. Vení, entrá.
+[signal arg="final_signal"]
