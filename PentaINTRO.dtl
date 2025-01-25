@@ -1,0 +1,29 @@
+[signal arg="signal"]
+"La gata en el baño": Miaaaau~
+Burbuja: ¿Teníamos una gata acá? Esa no me la sabía.
+"La gata en el baño": A mí no me tiene nadie, soy una gata independiente.
+Narradora: ¿Callejera, no querrás decir?
+"La gata en el baño": No seas prejuiciosa. Soy una gata elegante, también.
+Burbuja: ¡No tenés collar! ¡Mirá si te perdés!
+"La gata en el baño": También tengo uñas.
+"La gata en el baño": La gata en el baño saca sus garras, afiladas, y señala a Pop.
+"La gata en el baño": Así que cuidado con lo que decís.
+- "¿Vivís acá?"
+	Narradora: ¿Vivís en el baño?
+	"La gata en el baño": Un poco sí, un poco no. Mi cabeza está dispersa en cualquier lado.
+	Narradora: ¿Y vos?
+	"La gata en el baño": Yo vivo acá. No estoy tan dispersa.
+	Narradora: Mejor así, ¿no?
+	"La gata en el baño": Puede ser. \
+Me caés bien, humana.
+- "¿Cómo vas al baño?"
+	Narradora: Y... ¿cómo hacés para ir al baño?
+	"La gata en el baño": A una dama nunca se le preguntan esas cosas.
+	"La gata en el baño": Ni siquiera aunque la mate a una la curiosidad.
+	Narradora: Tenés razón, disculpá.
+	"La gata en el baño": La gata en el baño se ríe y te extiende la mano para que la beses.
+"La gata en el baño": Mi nombre es Penta. Hace ocho vidas que estoy acá.
+Penta: Y no sé si quiero terminar acá mi novena.
+Penta te mira con orgullo, como desde arriba.
+Burbuja: Qué miedo, casi me explota... mejor pasemos de largo.
+[signal arg="final_signal"]

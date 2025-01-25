@@ -1,12 +1,11 @@
-[gd_scene load_steps=21 format=3 uid="uid://cfm45yomcp1n4"]
+[gd_scene load_steps=18 format=3 uid="uid://cfm45yomcp1n4"]
 
 [ext_resource type="Script" path="res://base.gd" id="1_pbv5a"]
 [ext_resource type="Script" path="res://jugador.gd" id="2_blmu0"]
 [ext_resource type="Script" path="res://Personaje 1.gd" id="2_racle"]
 [ext_resource type="PackedScene" uid="uid://dikbdcffvrkat" path="res://manu.glb" id="3_aumme"]
-[ext_resource type="PackedScene" uid="uid://bod7gmjxf1msp" path="res://CASA.glb" id="4_dy6kp"]
+[ext_resource type="PackedScene" uid="uid://e6nnq3445whe" path="res://CASA.glb" id="4_dy6kp"]
 [ext_resource type="Script" path="res://SofiaV.gd" id="5_3iwx2"]
-[ext_resource type="AudioStream" uid="uid://ckw3aedw6dtns" path="res://musica/WhatsApp-Audio-2025-01-22-at-19.56.06.mp3" id="5_d0xo4"]
 [ext_resource type="Script" path="res://Penta.gd" id="6_gut4j"]
 [ext_resource type="Script" path="res://Corina.gd" id="7_ckl36"]
 [ext_resource type="PackedScene" uid="uid://mmwo0uyd6ol7" path="res://penta.glb" id="9_o7k0h"]
@@ -30,21 +29,16 @@ radius = 1.35
 [sub_resource type="SphereShape3D" id="SphereShape3D_12757"]
 radius = 1.35
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_0h68e"]
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_6yx7b"]
-data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
-
 [node name="Escena base" type="Node3D"]
 transform = Transform3D(1.008, 0, 0, 0, 1.008, 0, 0, 0, 1.008, -0.141683, 0, 0.764498)
 script = ExtResource("1_pbv5a")
 
 [node name="Personajeprincipal" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.33, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.571626, 0)
 script = ExtResource("2_blmu0")
 
 [node name="pill" type="MeshInstance3D" parent="Personajeprincipal"]
-transform = Transform3D(1.022, 0, 0, 0, 1, 0, 0, 0, 1, 0.0013217, 0.795121, -0.0432924)
+transform = Transform3D(1.022, 0, 0, 0, 1, 0, 0, 0, 1, 0.00132167, 0.795121, -0.0432925)
 mesh = SubResource("CapsuleMesh_m133b")
 skeleton = NodePath("../..")
 
@@ -66,14 +60,11 @@ script = ExtResource("2_racle")
 transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Manu/Area3D"]
-transform = Transform3D(-0.350765, -0.231259, 0.907459, -0.109688, 0.972504, 0.205436, -0.930017, -0.0274777, -0.366487, 1.61304, 1.97177, -1.43511)
+transform = Transform3D(-0.350765, -0.231259, 0.907459, -0.109688, 0.972504, 0.205436, -0.930017, -0.0274777, -0.366487, 1.16702, 1.24154, -1.13051)
 shape = SubResource("SphereShape3D_bx7xw")
 
 [node name="manu" parent="Manu/Area3D" instance=ExtResource("3_aumme")]
 transform = Transform3D(0.851062, 0, 0, 0, 0.851062, 0, 0, 0, 0.851062, 0, -0.0509425, 0)
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Manu"]
-stream = ExtResource("5_d0xo4")
 
 [node name="SofiaV" type="CharacterBody3D" parent="."]
 transform = Transform3D(-0.563958, 0, -0.825803, 0, 1, 0, 0.825803, 0, -0.563958, -6.00513, 0, -3)
@@ -83,7 +74,7 @@ script = ExtResource("5_3iwx2")
 transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SofiaV/Area3D"]
-transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, -2.42235, 0.042043, 0.934799)
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, -1.7939, 0.042043, 0.471266)
 shape = SubResource("SphereShape3D_45qyo")
 
 [node name="sofia v" parent="SofiaV/Area3D" instance=ExtResource("10_4xmcd")]
@@ -115,23 +106,9 @@ transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 508.763,
 shape = SubResource("SphereShape3D_12757")
 
 [node name="corina2" parent="Corina/Area3D" instance=ExtResource("11_q8eb2")]
-transform = Transform3D(-0.205504, 0, -0.978657, 0, 1, 0, 0.978657, 0, -0.205504, 3.89862, -0.0215279, -4.15277)
+transform = Transform3D(-0.205504, 0, -0.978657, 0, 1, 0, 0.978657, 0, -0.205504, 6.07231, -0.269707, -4.72814)
 
 [node name="CASA" parent="." instance=ExtResource("4_dy6kp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13436, -0.000557729, 1.33477)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.17257, -0.000557729, 1.33477)
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
-
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(0.992063, 0, 0, 0, 0.992063, 0, 0, 0, 0.992063, -3.07071, 4.77818, 0)
-light_energy = 3.424
-omni_range = 14.7187
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(15.514, 0, 0, 0, 15.514, 0, 0, 0, 15.514, 0, 0, 0)
-mesh = SubResource("PlaneMesh_0h68e")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_6yx7b")
