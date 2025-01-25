@@ -73,19 +73,21 @@ jump options
 label options
 ¿Qué hacés?
 - Preguntarle por su familia | [if {SofiaV.familia_on} == false]
+	jump familia
+	[end_timeline]
+- Preguntarle por sus hobbies
+	jump hobbies
+	[end_timeline]
+- Molestarla | [if {SofiaV.omo1} == false or {SofiaV.omo2} == false or {SofiaV.omo3} == false or {SofiaV.omo4} == false or {SofiaV.omo5} == false]
+	jump molestarla
+	[end_timeline]
+- Tomar una decisión
+	jump decision
+	[end_timeline]
+	
+label familia
 	set {SofiaV.puntajeresp} += 0.5
 	Narradora: Contanos de tu familia, Sofi.
-	if {SofiaV.familia} == true:
-		Sofía te mira a la cara con seriedad.
-		SofiV: Te dije que no quiero hablar de eso.
-		Parece decirlo en serio. Preferís no indagar más en el tema.
-		set {SofiaV.familia_on} = true
-		jump options
-	if {SofiaV.valsof} < 3:
-		Sofía mira hacia otro lado.
-		SofiV: Perdón, pero es un poco difícil hablar de eso... No sé si puedo contártelo todavía.
-		set {SofiaV.familia} = true
-		jump options
 	if {SofiaV.valsof} > 2:
 		Sofía te mira dudando, pero termina cediendo.
 		SofiV: Está bien, pero no mucho. Tengo a mi madre y ami hermana, con quienes tengo mucho y seguido contacto. \
@@ -93,101 +95,32 @@ label options
 		Narradora: ¿No podés hablarme de ambas?
 		SofiV: Preferiría no hablar mucho de ellos. Por favor, elegí.
 		- Madre
-			Narradora: Contame de tu madre.
-			SofiV: Ella no sabe que no sé nadar. No me atrevería a contarle, porque ella...
-			Sofía mira el suelo unos segundos y luego levanta la vista, segura de sí misma.
-			SofiV: Es prejuiciosa. No me aceptaría. Debería aprender a nadar sin contarle...
-			Burbuja: ¿No creés que puede llegar a aceptarte si le das una oportunidad?
-			SofiV: No hay manera. Es muy terca.
-			Narradora: Terminará por costarle la vida. La terquedad, digo.
-			Burbuja: Wow, qué fuerte.									SofiV\: Sí, pero es cierto.
-			- ¿Por qué le costará la vida?
-				SofiV: Me corrijo. Ya le está costando la vida.
-				Narradora: ¿Cómo?
-				SofiV: Está en sus últimos días. La pasaron por encima por no ver de ambos lados de la calle al cruzar. Siempre dijo que no era necesario.
-				Burbuja: Auch... lo siento mucho, Sofi.
-				Burbuja: Che, creo que esto se nos escapa de las manos. ¿No querés dejar que algún profesional se ocupe de ayudar a Sofía?
-			- Seguir ayudándola
-				No, Pop. Quiero seguir.
-				Si Pop se hubiera podido arquear de hombros, sentís que lo hubiera hecho.
-				SofiV: Como les decía, no es tan grave. Ella era una terca. El mundo no la necesita.
-				if {puntajeresp} == 0.5:
-					Te recorre un escalfrío. Sentís que es momento de cambiar de tema.
-					set {SofiaV.familia_on} = true
-					jump options
-				else:
-					Te recorre un escalfrío. Te das cuenta de que se acerca el momento de tomar una decisión.
-					set {SofiaV.familia_on} = true
-					jump options
-			- Dejar de ayudarla
-					jump badending
-			- ¿Por qué es tan terca?
-					Narradora: ¿Por qué decís que es terca, Sofi?
-					SofiV: Porque lo es. Es excesivamente tercca, no acepta un no como respuesta.
-					SofiV: Una vez que se encasilla en una idea, es muy difícil alejarla de ella.
-					SofiV: Yo nunca pude. Nunca pude convencerla de que era chef de reyes. Nunca pude convencerla de ver uno de mis videos.
-					SofiV: Nunca pude...
-					Sofía baja la mirada.
-					No hablemos más de esto.
-					if {puntajeresp} == 0.5:
-						Narradora: Bueno, bueno. Cambiemos de tema.
-						set {SofiaV.familia_on} = true
-						jump options
-					else:
-						Narradora: Bueno, bueno. De todos modos, ya estoy cerca de una decisión.
-						set {SofiaV.familia_on} = true
-						jump options
-			- Dejar de ayudarla
-					jump badending
+			jump madre
+			[end_timeline]
 		- Hermana
-			Narradora: Contame de tu hermana.
-			SofiV: Es simpática. La quiero mucho. Nos vemos cuando el tiempo nos lo permite.
-			SofiV: Ah, pero es celíaca. \
-			Eso complica un poco las cosas entre nosotras.
-			- "Nada que no puedas manejar"
-				Narradora: Nada que la gran Sofía Velazquez no pueda manejar, ¿cierto?
-				SofiV: Desde ya que lo puedo manejar. Ningún desafío es lo suficientemente grande como para detenerme.
-				Sofía parece contenta.
-				Burbuja: ¡Ey! No te alegres tanto. No era un halago, tampoco.
-				Burbuja: Che, esta chica está medio loca. No se da cuenta cuándo la molestamos y cuándo decimos la verdad. ¿No querés dejarla en paz?
-				- Seguir ayudándola
-					Narradora: No. Quiero seguir intentando.
-					Burbuja: Cómo digas.
-					if {SofiaV.puntajeresp} == 0.5:
-						Burbuja: Cómo digas.
-						Narradora: Cambiemos de tema, Sofi.
-						set {SofiaV.familia_on} = true
-						jump options
-					else:
-						Narradora: Creo que ya tengo una idea.
-						set {SofiaV.familia_on} = true
-						jump options
-				- Dejar de ayudarla
-						jump badending
-						[end_timeline]
-			- "¿Por qué es tan grave?"
-				Narradora: ¿Por qué es tan grave la celiaquía?
-				Narradora: No puedo cocinarle nada. Y, como vive en el mar, no puedo ir a visitarla tampoco.
-				Burbuja: Pst... esto es un problema demasiado complejo. ¿No querés dejarlo ser, e intentar con otro?
-				- Seguir ayudándola
-					Narradora: No, Pop. Quiero seguir.
-					if {puntajeresp} == 0.5:
-						Narradora: Pero cambiemos de tema.
-						set {familia_on} = true
-						jump options
-					else:
-						Narradora: Además, estoy llegando a una solución.
-						set {SofiaV.familia_on} = true
-						jump options
-				- Dejar de ayudarla
-						jump badending
-						[end_timeline]
-- Preguntarle por sus hobbies
+			jump hermana
+			[end_timeline]
+	if {SofiaV.familia} == true:
+		Sofía te mira a la cara con seriedad.
+		SofiV: Te dije que no quiero hablar de eso.
+		Parece decirlo en serio. Preferís no indagar más en el tema.
+		set {SofiaV.familia_on} = true
+		jump options
+		[end_timeline]
+	if {SofiaV.valsof} < 3:
+		Sofía mira hacia otro lado.
+		SofiV: Perdón, pero es un poco difícil hablar de eso... No sé si puedo contártelo todavía.
+		set {SofiaV.familia} = true
+		jump options
+		[end_timeline]
+[end_timeline]
+label hobbies
 	Narradora: ¿Qué hacés para divertirte, Sofi?
-- Molestarla | [if {SofiaV.omo1} == false or {SofiaV.omo2} == false or {SofiaV.omo3} == false or {SofiaV.omo4} == false or {SofiaV.omo5} == false]
+[end_timeline]
+label molestarla
 	label randomnumber
-	set {random_sof} = range(1,6).pick_random()
-	if {random_sof} == 1:
+	set {SofiaV.random_sof} = range(1,6).pick_random()
+	if {SofiaV.random_sof} == 1:
 		if {SofiaV.omo1} == false:
 			Narradora: ¿No creés que no es para tanto tu problema?
 			SofiV: ¿Por qué decís eso?
@@ -252,7 +185,8 @@ label options
 		else:
 			jump randomnumber
 			[end_timeline]
-- Tomar una decisión
+[end_timeline]
+label decision
 	if {SofiaV.valsof} < 3:
 		if {SofiaV.negative_r_sof} == true:
 			¡Ya sé qué hacer!
@@ -277,4 +211,104 @@ label options
 		- "Expandí tus conocimientos culinarios" | [if {SofiaV.cocina} == true]
 		jump 
 		[end_timeline]
+[end_timeline]
 [signal arg="final_signal"]
+
+label madre
+	Narradora: Contame de tu madre.
+	SofiV: Ella no sabe que no sé nadar. No me atrevería a contarle, porque ella...
+	Sofía mira el suelo unos segundos y luego levanta la vista, segura de sí misma.
+	SofiV: Es prejuiciosa. No me aceptaría. Debería aprender a nadar sin contarle...
+	Burbuja: ¿No creés que puede llegar a aceptarte si le das una oportunidad?
+	SofiV: No hay manera. Es muy terca.
+	Narradora: Terminará por costarle la vida. La terquedad, digo.
+	Burbuja: Wow, qué fuerte.
+	SofiV: Sí, pero es cierto.
+	- ¿Por qué le costará la vida?
+		SofiV: Me corrijo. Ya le está costando la vida.
+		Narradora: ¿Cómo?
+		SofiV: Está en sus últimos días. La pasaron por encima por no ver de ambos lados de la calle al cruzar. Siempre dijo que no era necesario.
+		Burbuja: Auch... lo siento mucho, Sofi.
+		Burbuja: Che, creo que esto se nos escapa de las manos. ¿No querés dejar que algún profesional se ocupe de ayudar a Sofía?
+		- Seguir ayudándola
+			No, Pop. Quiero seguir.
+			Si Pop se hubiera podido arquear de hombros, sentís que lo hubiera hecho.
+			SofiV: Como les decía, no es tan grave. Ella era una terca. El mundo no la necesita.
+			if {puntajeresp} == 0.5:
+				Te recorre un escalfrío. Sentís que es momento de cambiar de tema.
+				set {SofiaV.familia_on} = true
+				jump options
+				[end_timeline]
+			else:
+				Te recorre un escalfrío. Te das cuenta de que se acerca el momento de tomar una decisión.
+				set {SofiaV.familia_on} = true
+				jump options
+				[end_timeline]
+		- Dejar de ayudarla
+			jump badending
+		[end_timeline]
+	- ¿Por qué es tan terca?
+		Narradora: ¿Por qué decís que es terca, Sofi?
+		SofiV: Porque lo es. Es excesivamente tercca, no acepta un no como respuesta.
+		SofiV: Una vez que se encasilla en una idea, es muy difícil alejarla de ella.
+		SofiV: Yo nunca pude. Nunca pude convencerla de que era chef de reyes. Nunca pude convencerla de ver uno de mis videos.
+		SofiV: Nunca pude...
+		Sofía baja la mirada.
+		No hablemos más de esto.
+		if {puntajeresp} == 0.5:
+			Narradora: Bueno, bueno. Cambiemos de tema.
+			set {SofiaV.familia_on} = true
+			jump options
+			[end_timeline]
+		else:
+			Narradora: Bueno, bueno. De todos modos, ya estoy cerca de una decisión.
+			set {SofiaV.familia_on} = true
+			jump options
+			[end_timeline]
+		[end_timeline]
+		
+label hermana
+	Narradora: Contame de tu hermana.
+	SofiV: Es simpática. La quiero mucho. Nos vemos cuando el tiempo nos lo permite.
+	SofiV: Ah, pero es celíaca. \
+	Eso complica un poco las cosas entre nosotras.
+	- "Nada que no puedas manejar"
+		Narradora: Nada que la gran Sofía Velazquez no pueda manejar, ¿cierto?
+		SofiV: Desde ya que lo puedo manejar. Ningún desafío es lo suficientemente grande como para detenerme.
+		Sofía parece contenta.
+		Burbuja: ¡Ey! No te alegres tanto. No era un halago, tampoco.
+		Burbuja: Che, esta chica está medio loca. No se da cuenta cuándo la molestamos y cuándo decimos la verdad. ¿No querés dejarla en paz?
+		- Seguir ayudándola
+			Narradora: No. Quiero seguir intentando.
+			Burbuja: Cómo digas.
+			if {SofiaV.puntajeresp} == 0.5:
+				Burbuja: Cómo digas.
+				Narradora: Cambiemos de tema, Sofi.
+				set {SofiaV.familia_on} = true
+				jump options
+				[end_timeline]
+			else:
+				Narradora: Creo que ya tengo una idea.
+				set {SofiaV.familia_on} = true
+				jump options
+				[end_timeline]
+		- Dejar de ayudarla
+			jump badending
+			[end_timeline]
+	- "¿Por qué es tan grave?"
+		Narradora: ¿Por qué es tan grave la celiaquía?
+		Narradora: No puedo cocinarle nada. Y, como vive en el mar, no puedo ir a visitarla tampoco.
+		Burbuja: Pst... esto es un problema demasiado complejo. ¿No querés dejarlo ser, e intentar con otro?
+		- Seguir ayudándola
+			Narradora: No, Pop. Quiero seguir.
+			if {puntajeresp} == 0.5:
+				Narradora: Pero cambiemos de tema.
+				set {familia_on} = true
+				jump options
+			else:
+				Narradora: Además, estoy llegando a una solución.
+				set {SofiaV.familia_on} = true
+				jump options
+		- Dejar de ayudarla
+			jump badending
+			[end_timeline]

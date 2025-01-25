@@ -15,14 +15,14 @@ Burbuja: ¡Ni queríamos entrar!
 Narradora: . . .
 <Empty Text Event>
 - Pedir permiso
-	set {Return} = "option11"
+	set {MANU.Return} = "option11"
 - Entrar bruscamente
 	Sin decir ni preguntar nada, entrás en la habitación. El olor a chisitos es todavía más fuerte.
 	"Chica de los chisitos": ¿No tenés ganas de hablar? Okay, no hablemos. Nomás cuidado con dónde pisás.
 	Burbuja: ¡Ey! ¿No nos vas a decir ni cómo te llamás?
 	"Chica de los chisitos": No lo preguntaron. Soy Manu.
 	Manu: Ah, ni se preocupen por avisar cuando se vayan. Y no cierren la puerta.
-if {Return} == "option11":
+if {MANU.Return} == "option11":
 	Narradora: Yo sí quiero entrar. Tampoco me disgustan tanto los chisitos.
 	"Chica de los chisitos": No estoy comiendo chisitos. ¿Nunca sentiste el olor de una computadora hirviendo, un cable quebrado, una pantalla a punto de estallar?
 	Burbuja: . . .
