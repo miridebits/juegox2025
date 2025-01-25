@@ -25,9 +25,13 @@ global="*res://base.gd"
 directories/dch_directory={
 "Burbuja": "res://Burbuja.dch",
 "Chica de los chisitos": "res://Personajes/Chica de los chisitos.dch",
+"Corina": "res://Corina.dch",
 "Estrella de mar (1)": "res://Estrella de mar (1).dch",
+"La chica de papel": "res://La chica de papel.dch",
+"La gata en el baño": "res://La gata en el baño.dch",
 "Manu": "res://Manu.dch",
 "Narradora": "res://Personajes/Narradora.dch",
+"Penta": "res://Penta.dch",
 "Personaje principal": "res://Personaje principal.dch",
 "Personajes/Manu": "res://Personajes/Manu.dch",
 "SofiV": "res://SofiV.dch",
@@ -38,6 +42,8 @@ directories/dch_directory={
 "burbuja": "res://burbuja.dch"
 }
 directories/dtl_directory={
+"CorinaINTRO": "res://CorinaINTRO.dtl",
+"PentaINTRO": "res://PentaINTRO.dtl",
 "SOFIA  DECISIÓN": "res://SOFIA  DECISIÓN.dtl",
 "SofiVINTRO": "res://SofiVINTRO.dtl",
 "Timelines Dialogos Juego/MANU DECISIÓN": "res://MANU DECISIÓN.dtl",
