@@ -1,13 +1,16 @@
 extends CharacterBody3D
 
 #Manu
+@onready var musica: AudioStreamPlayer = $AudioStreamPlayer
 
 var player_in_range = false
 var repeticion = true
 
 # Función que se ejecuta cuando el nodo está listo en la escena
+
 func _ready():
 	#Creo la variable de la ruta
+#	musica.play()
 	var area = $Area3D 
 	area.connect("body_entered", Callable(self, "_on_body_entered"))  # Conectas la señal a la función
 	area.connect("body_exited", Callable(self, "_on_body_exited"))  # Conectas la señal a la función

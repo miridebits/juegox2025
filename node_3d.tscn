@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cfm45yomcp1n4"]
+[gd_scene load_steps=21 format=3 uid="uid://cfm45yomcp1n4"]
 
 [ext_resource type="Script" path="res://base.gd" id="1_pbv5a"]
 [ext_resource type="Script" path="res://jugador.gd" id="2_blmu0"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dikbdcffvrkat" path="res://manu.glb" id="3_aumme"]
 [ext_resource type="PackedScene" uid="uid://bod7gmjxf1msp" path="res://CASA.glb" id="4_dy6kp"]
 [ext_resource type="Script" path="res://SofiaV.gd" id="5_3iwx2"]
+[ext_resource type="AudioStream" uid="uid://ckw3aedw6dtns" path="res://musica/WhatsApp-Audio-2025-01-22-at-19.56.06.mp3" id="5_d0xo4"]
 [ext_resource type="Script" path="res://Penta.gd" id="6_gut4j"]
 [ext_resource type="Script" path="res://Corina.gd" id="7_ckl36"]
 [ext_resource type="PackedScene" uid="uid://mmwo0uyd6ol7" path="res://penta.glb" id="9_o7k0h"]
@@ -70,6 +71,9 @@ shape = SubResource("SphereShape3D_bx7xw")
 
 [node name="manu" parent="Manu/Area3D" instance=ExtResource("3_aumme")]
 transform = Transform3D(0.851062, 0, 0, 0, 0.851062, 0, 0, 0, 0.851062, 0, -0.0509425, 0)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Manu"]
+stream = ExtResource("5_d0xo4")
 
 [node name="SofiaV" type="CharacterBody3D" parent="."]
 transform = Transform3D(-0.563958, 0, -0.825803, 0, 1, 0, 0.825803, 0, -0.563958, -6.00513, 0, -3)
