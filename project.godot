@@ -38,7 +38,6 @@ directories/dch_directory={
 "burbuja": "res://burbuja.dch"
 }
 directories/dtl_directory={
-"SOFIA  DECISIÓN": "res://SOFIA  DECISIÓN.dtl",
 "SOFIADECISION": "res://SOFIADECISION.dtl",
 "SofiDecisión": "res://Timelines Dialogos Juego/SofiDecisión.dtl",
 "SofiVINTRO": "res://SofiVINTRO.dtl",
