@@ -25,7 +25,6 @@ func _unhandled_input(event: InputEvent) -> void:
 				camera.rotate_x(-event.relative.y * 0.01)
 				camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-30), deg_to_rad(60))
 
-
 func _on_dialogic_signal(argument: String):
 	if argument == "signal":
 		movimiento = false
