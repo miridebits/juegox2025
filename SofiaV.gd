@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
 #Sofia
+@onready var sofi = $"../sofi"
 
 var player_in_range = false
 var repeticion = true
@@ -19,6 +20,7 @@ func _on_body_entered(body):
 	# Verificamos que el cuerpo que entra es el jugador.
 	if body is CharacterBody3D:  # Cambia esto si es un nodo específico (como la puerta)
 		if body.name == "Personajeprincipal":
+			sofi.play()
 			player_in_range = true
 			print("El jugador ha entrado en el rango de interacción")
 			if repeticion:
@@ -35,6 +37,7 @@ func _on_body_exited(body):
 	# Verificamos que el cuerpo que sale es el jugador.
 	if body is CharacterBody3D:  # Cambia esto si es un nodo específico
 		if body.name == "Personajeprincipal":
+			sofi.stop()
 			player_in_range = false
 			print("El jugador ha salido del rango de interacción")
 

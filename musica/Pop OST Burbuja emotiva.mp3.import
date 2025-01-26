@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dsfj6ua03da5c"
+path="res://.godot/imported/Pop OST Burbuja emotiva.mp3-378644f07f7a40bc0c685e31c9c4277f.mp3str"
+
+[deps]
+
+source_file="res://musica/Pop OST Burbuja emotiva.mp3"
+dest_files=["res://.godot/imported/Pop OST Burbuja emotiva.mp3-378644f07f7a40bc0c685e31c9c4277f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

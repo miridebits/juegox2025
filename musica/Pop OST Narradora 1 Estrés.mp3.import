@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bciofcr6rxxua"
+path="res://.godot/imported/Pop OST Narradora 1 Estrés.mp3-5eee31a0635370127b7232ca02647b32.mp3str"
+
+[deps]
+
+source_file="res://musica/Pop OST Narradora 1 Estrés.mp3"
+dest_files=["res://.godot/imported/Pop OST Narradora 1 Estrés.mp3-5eee31a0635370127b7232ca02647b32.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
