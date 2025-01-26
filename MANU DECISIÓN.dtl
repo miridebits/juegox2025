@@ -4,19 +4,19 @@ Manu: ¿Para qué tengo cuerpo si no me hace caso? [pause=0.5]
 - "¿Estás bien?"
 	Narradora: ¿Estás bien, Manu?
 	Manu: En lo más mínimo. \
-Me arden los ojos, me duelen los dedos.
+	Me arden los ojos, me duelen los dedos.
 	Manu: No doy más.
 	Burbuja: ¿Es tan grave?\
-¿No será por comer tantos chisitos?
+	¿No será por comer tantos chisitos?
 	Manu: No. Y no como chisitos.
 	Manu fulmina a Pop con la mirada.
 	Manu: Y cuidado con lo que decís, que te reviento.
 	Narradora: Bueno, aflojen. ¿Qué pasó, Manu?
 	Manu no puede mirarte a los ojos... [pause=0.5] Pero vos sí podés. \
-Están hinchados y cansados, casi derretidos.
+	Están hinchados y cansados, casi derretidos.
 	Manu: Hace un tiempo que estoy trabajando con las compus, y eso me hace muy feliz.
 	Manu: Pero siento que mi cuerpo no aguanta más \
-Me traicionan la postura, las articulaciones, los órganos.
+	Me traicionan la postura, las articulaciones, los órganos.
 	Burbuja: No entiendo el problema. ¿Por qué no dejás de hacerlo y listo?
 	Algo parece encajar en la historia que cuenta Manu.
 	Narradora: Porque la hace feliz.
@@ -340,15 +340,15 @@ if {valdes1} > 2:
 	Narradora: No, claro. Fuiste irrespetuosa. Fuiste ingenua. ¿Por qué confiaría en vos?
 	- . . .
 		Manu: Sí, lo que suponía. Te da igual. \
-Y eso que creí que te importaba. \
-Cuando me hablaste del dibujo...
+		Y eso que creí que te importaba. \
+		Cuando me hablaste del dibujo...
 		Narradora: No sé qué decir..
 		Manu: No digas nada. Sólo no cierres la puerta cuando salgas.
 		Sentís que podrías haberla convencido. Que estuviste cerca de hacerlo. ¿En qué fallaste? ¿Por qué? ¿Cuántas veces has fallado antes?
 	- . . .
 		Manu: Sí, lo que suponía. Te da igual. \\
-Y eso que creí que te importaba. \\
-Cuando me hablaste del dibujo...
+		Y eso que creí que te importaba. \\
+		Cuando me hablaste del dibujo...
 		Narradora: No sé qué decir..
 		Manu: No digas nada. Sólo no cierres la puerta cuando salgas.
 		Sentís que podrías haberla convencido. Que estuviste cerca de hacerlo. ¿En qué fallaste? ¿Por qué? ¿Cuántas veces has fallado antes?
@@ -360,7 +360,8 @@ else:
 	Narradora: Me encantaría. Veámonos más tarde.
 	Manu sonríe. Por primera vez, se ve feliz de verdad.
 	Manu: Por favor, no cierren la puerta al salir.
-
+	[signal arg="final_signal"]
+	
 label VEREDICTO
 if {valdes1} > 2:
 	Manu no parece estar pensándolo mucho. Como si fingiera estar pensando.
@@ -379,7 +380,7 @@ if {valdes1} > 2:
 	Manu: No sé si puedo confiar en ustedes.
 	Narradora: ¿Después de nuestra conversación?
 	Manu: Me ayudaron a pensar, sí, pero también me trataron despectivamente. \
-¿Por qué debería creer que esta es la mejor opción?
+	¿Por qué debería creer que esta es la mejor opción?
 	- "Porque somos tus amigas"
 		Narradora: Porque somos tus amigas. Tenés que creernos. Queremos lo mejor para vos.
 		Manu te mira extrañada
@@ -407,8 +408,8 @@ elif {valdes1} < 1:
 	Te sorprendés. No esperabas que aceptara tan rápido.
 	Narradora: ¿Puedo preguntarte por qué?
 	Manu: Esas son preguntas que me hacen querer no hacerles caso, pero te voy a decir igual. \
-Me diste confianza. Me hablaste bien casi siempre. Eso me gusta.\
-Manu\: Así que voy a decidir confiar en vos.
+	Me diste confianza. Me hablaste bien casi siempre. Eso me gusta.\
+	Manu\: Así que voy a decidir confiar en vos.
 	Narradora: Podrías estar poniendo tu vida en mis manos...
 	Manu hace una mueca, como diciendo "¿qué me importa?"
 	Manu: Algún día iba a tener que poner mi vida en las manos de alguien.

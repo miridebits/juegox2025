@@ -39,10 +39,12 @@ directories/dch_directory={
 "Timelines Dialogos Juego/Chica de los chisitos": "res://Chica de los chisitos.dch",
 "Timelines Dialogos Juego/Manu": "res://Manu.dch",
 "Timelines Dialogos Juego/Narradora": "res://Narradora.dch",
-"burbuja": "res://burbuja.dch"
+"burbuja": "res://burbuja.dch",
+"pre burbuja": "res://pre burbuja.dch"
 }
 directories/dtl_directory={
 "CorinaINTRO": "res://CorinaINTRO.dtl",
+"INTROaljuego": "res://Introducción/INTROaljuego.dtl",
 "PentaINTRO": "res://PentaINTRO.dtl",
 "SOFIA  DECISIÓN": "res://SOFIA  DECISIÓN.dtl",
 "SofiVINTRO": "res://SofiVINTRO.dtl",
