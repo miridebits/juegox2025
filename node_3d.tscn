@@ -33,7 +33,7 @@ radius = 1.38507
 radius = 1.385
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_584dp"]
-radius = 1.5
+radius = 1.35
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_12757"]
 radius = 1.35

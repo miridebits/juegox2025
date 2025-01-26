@@ -1,11 +1,10 @@
 extends CharacterBody3D
 
-#Manu
+#Penta
 @onready var musica: AudioStreamPlayer = $AudioStreamPlayer
 
 var player_in_range = false
 var repeticion = true
-var repeticion_decision = true
 
 # Función que se ejecuta cuando el nodo está listo en la escena
 
@@ -27,9 +26,11 @@ func _on_body_entered(body):
 				Dialogic.start("PentaINTRO")
 				global.introducciones += 1
 				repeticion = false
-#			if global.introducciones == 4:
-#				Dialogic.start("contiue")
-#			pass
+			if global.introducciones == 4:
+				Dialogic.start("contiue")
+			pass
+
+
 
 # Esta función se llama cuando otro cuerpo sale del área de proximidad
 func _on_body_exited(body):
@@ -46,8 +47,5 @@ func _process(_delta):
 
 # Función para manejar la interacción
 func interact():
-	if repeticion_decision:
-			# Aquí va lo que sucederá cuando el jugador presione la tecla de interacción (E)
-		Dialogic.start("Timelines Dialogos Juego/MANU DECISIÓN")
-		global.decisiones += 1
-		repeticion_decision = false
+	# Aquí va lo que sucederá cuando el jugador presione la tecla de interacción (E)
+	Dialogic.start("Timelines Dialogos Juego/MANU DECISIÓN")
