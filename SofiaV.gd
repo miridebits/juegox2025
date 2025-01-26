@@ -8,12 +8,12 @@ var repeticion = true
 # Función que se ejecuta cuando el nodo está listo en la escena
 func _ready():
 	#Creo la variable de la ruta
-	var area = $Area3D 
+	var area = $Area3D
 	area.connect("body_entered", Callable(self, "_on_body_entered"))  # Conectas la señal a la función
 	area.connect("body_exited", Callable(self, "_on_body_exited"))  # Conectas la señal a la función
 
-func _on_dialogue_finished():
-	global.is_in_dialogue = false
+#func _on_dialogue_finished():
+	#global.is_in_dialogue = false
 # Esta función se llama cuando otro cuerpo entra en el área de proximidad
 func _on_body_entered(body):
 	# Verificamos que el cuerpo que entra es el jugador.
@@ -46,4 +46,4 @@ func _process(_delta):
 # Función para manejar la interacción
 func interact():
 	# Aquí va lo que sucederá cuando el jugador presione la tecla de interacción (E)
-	Dialogic.start("SofiDecisión")
+	Dialogic.start("SOFIA  DECISIÓN")

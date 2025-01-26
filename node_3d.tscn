@@ -108,7 +108,7 @@ script = ExtResource("6_gut4j")
 transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Penta/Area3D"]
-transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0.214042, -1.06991, -8.87218)
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0.998, -1.07, -8.184)
 shape = SubResource("SphereShape3D_584dp")
 
 [node name="penta" parent="Penta/Area3D" instance=ExtResource("9_o7k0h")]
@@ -122,7 +122,7 @@ script = ExtResource("7_ckl36")
 transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Corina/Area3D"]
-transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 508.763, -1571.87, 744.982)
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 6.089, 0, -5.99)
 shape = SubResource("SphereShape3D_12757")
 
 [node name="corina2" parent="Corina/Area3D" instance=ExtResource("11_q8eb2")]
