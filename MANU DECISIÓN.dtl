@@ -329,8 +329,9 @@ Manu te mira a los ojos con frialdad.
 Manu: Ni me sorprende.
 Manu: Por favor, no vuelvan a hablarme.
 Cuando Manu aparte su mirada de vos, sentís que le fallaste gravemente. ¿A cuánta gente le habrás fallado así antes?
-[end_timeline]
 [signal arg="final_signal"]
+[end_timeline]
+
 
 label goodending
 if {valdes1} > 2:
@@ -361,6 +362,7 @@ else:
 	Manu sonríe. Por primera vez, se ve feliz de verdad.
 	Manu: Por favor, no cierren la puerta al salir.
 	[signal arg="final_signal"]
+	[end_timeline]
 
 label VEREDICTO
 if {valdes1} > 2:
@@ -416,3 +418,4 @@ elif {valdes1} < 1:
 	Manu: Dejen la puerta abierta cuando salgan, por favor. Y espero volver a verlos. Quizás no pronto.
 	No podés evitar sonreír. Fue un éxito, e hiciste el bien. Efectivamente, las cosas están cambiando.
 [signal arg="final_signal"]
+[end_timeline]

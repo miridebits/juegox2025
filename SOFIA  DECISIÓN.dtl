@@ -75,9 +75,6 @@ label options
 - Preguntarle por su familia | [if {SofiaV.familia_on} == false]
 	jump familia
 	[end_timeline]
-- Preguntarle por sus hobbies
-	jump hobbies
-	[end_timeline]
 - Molestarla | [if {SofiaV.omo1} == false or {SofiaV.omo2} == false or {SofiaV.omo3} == false or {SofiaV.omo4} == false or {SofiaV.omo5} == false]
 	jump molestarla
 	[end_timeline]
@@ -113,9 +110,6 @@ label familia
 		set {SofiaV.familia} = true
 		jump options
 		[end_timeline]
-[end_timeline]
-label hobbies
-	Narradora: ¿Qué hacés para divertirte, Sofi?
 [end_timeline]
 label molestarla
 	label randomnumber
@@ -208,8 +202,6 @@ label decision
 		Sofía parece escucharte atentantemente.
 		- "Aprendé a nadar con tu familia"
 		- "No les pidas nada"
-		- "Expandí tus conocimientos culinarios" | [if {SofiaV.cocina} == true]
-		jump 
 		[end_timeline]
 [end_timeline]
 [signal arg="final_signal"]

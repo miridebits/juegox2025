@@ -113,6 +113,10 @@ variables={
 portraits/default_portrait=""
 save/autosave=false
 
+[display]
+
+window/stretch/mode="viewport"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/gd-blender-3d-shortcuts/plugin.cfg")
