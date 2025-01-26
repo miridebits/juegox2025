@@ -1,3 +1,4 @@
+[signal arg="signal"]
 Burbuja: ¡Qué bien cuidado está este jardín!
 Narradora: La verdad que sí, está hermoso.
 "La chica de papel": ¡Gracias, hermosa!
@@ -32,3 +33,4 @@ Corina: Eso. Desconfiás demasiado.
 Corina te dirige una sonrisa y vuelve a dirigir su atención hacia las plantas.
 Burbuja: No sé por qué, pero sigo desconfiando...
 Por alguna razón, vos también.
+[signal arg="final_signal"]

@@ -76,16 +76,7 @@ layout/style_list=[]
 layout/default_style="Default"
 variables={
 "Folder": {},
-"MANU": {
 "Return": "inicio",
-"VEREDICTO": "veredicto",
-"decisión": "inicio",
-"dibujo": false,
-"sangre": false,
-"valdes1": 0,
-"valdes2": 0,
-"valpreg": 0.0
-},
 "SofiaV": {
 "cocina": false,
 "familia": false,
@@ -99,7 +90,14 @@ variables={
 "puntajeresp": 0.0,
 "random_sof": 0,
 "valsof": 0
-}
+},
+"VEREDICTO": "veredicto",
+"decisión": "inicio",
+"dibujo": false,
+"sangre": false,
+"valdes1": 0,
+"valdes2": 0,
+"valpreg": 0.0
 }
 portraits/default_portrait=""
 save/autosave=false
