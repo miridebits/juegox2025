@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cfm45yomcp1n4"]
+[gd_scene load_steps=29 format=3 uid="uid://cfm45yomcp1n4"]
 
 [ext_resource type="Script" path="res://base.gd" id="1_pbv5a"]
 [ext_resource type="Texture2D" uid="uid://buj43rhvrxou7" path="res://partly-cloudy-sky_0_5K_ffa52c47-b8b2-42e1-92eb-b22b1ac43348.exr" id="2_2jr6e"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://mmwo0uyd6ol7" path="res://penta.glb" id="9_o7k0h"]
 [ext_resource type="PackedScene" uid="uid://4tfuha2llpt0" path="res://sofia v.glb" id="10_4xmcd"]
 [ext_resource type="PackedScene" uid="uid://cxbiddwg0plwn" path="res://corina.glb" id="11_q8eb2"]
+[ext_resource type="Script" path="res://PUERTA.gd" id="18_rnf4y"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_qepuu"]
 panorama = ExtResource("2_2jr6e")
@@ -47,6 +48,8 @@ radius = 1.35
 data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_2g60p"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_oain6"]
 
 [node name="Escena base" type="Node3D"]
 transform = Transform3D(1.008, 0, 0, 0, 1.008, 0, 0, 0, 1.008, -0.132519, 2.38419e-07, 0.779305)
@@ -189,3 +192,13 @@ shape = SubResource("ConcavePolygonShape3D_26vhl")
 transform = Transform3D(16.647, 0, 0, 0, 1, 0, 0, 0, 16.647, 0, 0, 0)
 visible = false
 mesh = SubResource("PlaneMesh_2g60p")
+
+[node name="PUERTA" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.41922, -6.30601)
+script = ExtResource("18_rnf4y")
+
+[node name="Area3D" type="Area3D" parent="PUERTA"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PUERTA/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.572233, -0.46767, -0.0349698)
+shape = SubResource("SphereShape3D_oain6")

@@ -43,6 +43,7 @@ directories/dch_directory={
 "pre burbuja": "res://pre burbuja.dch"
 }
 directories/dtl_directory={
+"CorinaDECISIÓN": "res://CorinaDECISIÓN.dtl",
 "CorinaINTRO": "res://CorinaINTRO.dtl",
 "INTROaljuego": "res://Introducción/INTROaljuego.dtl",
 "PentaINTRO": "res://PentaINTRO.dtl",
@@ -51,7 +52,8 @@ directories/dtl_directory={
 "Timelines Dialogos Juego/MANU DECISIÓN": "res://MANU DECISIÓN.dtl",
 "Timelines Dialogos Juego/MANU INTRO": "res://MANU INTRO.dtl",
 "continuar": "res://continuar.dtl",
-"escena1": "res://escena1.dtl"
+"escena1": "res://escena1.dtl",
+"penta_2": "res://penta_2.dtl"
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
@@ -94,11 +96,17 @@ variables={
 "valsof": 0
 },
 "VEREDICTO": "veredicto",
+"decision_cor_on": false,
 "decisión": "inicio",
 "dibujo": false,
+"optfinal_cor1": false,
+"optfinal_cor2": false,
 "sangre": false,
+"valcor": 0,
 "valdes1": 0,
 "valdes2": 0,
+"valopcor1": false,
+"valopcor2": false,
 "valpreg": 0.0
 }
 portraits/default_portrait=""
