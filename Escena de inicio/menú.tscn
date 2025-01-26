@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://je8kprmerwuh"]
+[gd_scene load_steps=3 format=3 uid="uid://je8kprmerwuh"]
 
 [ext_resource type="Script" path="res://Escena de inicio/menú.gd" id="1_bpj7s"]
+[ext_resource type="Texture2D" uid="uid://rab8gwvr5rae" path="res://alfred-kenneally-NHZUQR3d2VY-unsplash.jpg" id="2_ifeu3"]
 
 [node name="Menú" type="Control"]
 layout_mode = 3
@@ -20,6 +21,10 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.610467, 0.577914, 0.900038, 1)
 
+[node name="Alfred-kenneally-nhzuqr3d2vy-unsplash" type="Sprite2D" parent="."]
+position = Vector2(862, 716)
+texture = ExtResource("2_ifeu3")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -27,10 +32,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -286.5
-offset_top = -122.5
-offset_right = 286.5
-offset_bottom = 122.5
+offset_left = -281.0
+offset_top = -66.0
+offset_right = 292.0
+offset_bottom = 179.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 7
@@ -41,11 +46,6 @@ theme_override_font_sizes/font_size = 50
 text = "Jugar
 "
 
-[node name="Opciones" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "Opciones"
-
 [node name="Salir" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
@@ -53,5 +53,4 @@ text = "Salir
 "
 
 [connection signal="pressed" from="VBoxContainer/Jugar" to="." method="_on_jugar_pressed"]
-[connection signal="pressed" from="VBoxContainer/Opciones" to="." method="_on_opciones_pressed"]
 [connection signal="pressed" from="VBoxContainer/Salir" to="." method="_on_salir_pressed"]
