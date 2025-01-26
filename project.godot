@@ -24,6 +24,7 @@ global="*res://base.gd"
 
 directories/dch_directory={
 "Burbuja": "res://Burbuja.dch",
+"Burbuje pre": "res://Burbuje pre.dch",
 "Chica de los chisitos": "res://Personajes/Chica de los chisitos.dch",
 "Corina": "res://Corina.dch",
 "Estrella de mar (1)": "res://Estrella de mar (1).dch",
@@ -43,6 +44,7 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "CorinaINTRO": "res://CorinaINTRO.dtl",
+"INTROaljuego": "res://Escena introducción/INTROaljuego.dtl",
 "PentaINTRO": "res://PentaINTRO.dtl",
 "SOFIA  DECISIÓN": "res://SOFIA  DECISIÓN.dtl",
 "SofiVINTRO": "res://SofiVINTRO.dtl",
