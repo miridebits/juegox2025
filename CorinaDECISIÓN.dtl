@@ -1,0 +1,484 @@
+[signal arg="signal"]
+Corina: Ay... ¡No puede ser!
+Corina: ¿¡Por qué me pasa esto a mí!?
+Corina parece estar a punto de implosionar. Cuando te ve entrar en el jardín se relaja, y se dirige a vos con una sonrisa tensa.
+Corina: ¡Hola! Ya te extrañaba.
+# A LOS CUATRO PUNTOS, CORINA TE DEJA DE DAR PELOTA
+- "¿Estás de mal humor?"
+	Narradora: ¿Te despertaste con el pie izquierdo, Corina? ¿Eh?
+	Corina no parece poder creer lo que escucha. Recupera la compostura y te sonríe.
+	Corina: No, para nada. Me desperté con lechuguitas en el estómago, enomarada como siempre de mi profesión.
+	Narradora: ¿Entonces? ¿Por qué tanto grito?
+	Burbuja: Eso, Corina. ¿Por qué tanto grito?
+	Corina: No gritaba. No digan eso.
+	Entre las tres confluye un silencio incómodo, profundo como un aljibe.
+	Narradora: Bueno, Corina. Contanos qué pasa.
+	Corina te mira con desconfianza y asiente.
+	set {Folder.valcor} += 1
+- "Tranquila, hablémoslo"
+	Narradora: No te estreses, Corina. Hablemos lo que pasó.
+	Corina: No sé qué decís. No estoy estresada.
+	Burbuja: Yo te veo bastante estresada, la verdad.
+	Corina mira fijamente a Pop, como rogándole que se calle.
+	Narradora: Si pasa algo, me podés decir. Estoy para acompañarte, no para atacarte.
+	Corina: Pero...
+	Narradora: Lo digo en serio, Corina.
+	Corina parece dudar, pero termina asintiiendo.
+	Está bien. Pero no le cuentes a nadie.
+	set {Folder.valcor} -= 1
+- "Todo se puede solucionar"
+	Narradora: Nada te puede estar haciendo gritar así, Corina. Todo es solucionable.
+	Corina no sabe qué decir, y aparta la mirada, pero tras unos segundos vuelve a posar sus ojos en vos..
+	Corina: Sí, coincido.\
+	Pero no todo es fácil de solucionar.
+	Narradora: Eso es cierto. Pero ¿qué puede ser tan grave que no podés solucionar ni vos?
+	Burbuja: Tal cual. No puede haber sido tan urgente como para estar gritando.
+	Corina: ¡NO TIENEN IDEA!
+	Tras gritar, Corina se tapa la boca.
+	Narradora: ¿Qué está pasando, Corina?
+	Corina: Te voy a decir. Pero que quede entre nosotras.
+	set {Folder.valcor} += 0
+Corina: Hace mucho tiempo que cuido a mis veges. Siempre creí que disfrutaban de mi cuidado.
+Corina: Pero hace poco se me murió un plantín.
+Corina: Y eso me hace pensar en varias cosas...
+Corina: ¿Alguna vez las cuidé bien? ¿Qué es lo que hice mal?
+Corina: Y por sobre todo... [pause = 1]\
+¿Qué debería hacer ahora?
+Narradora: ¿A qué te referís?
+Corina: ¿Debería seguir cuidando a mis plantas, aunque les haga daño? ¿O debería pedirle a alguien más que las cuide por mí?
+Burbuja: Esto es bastante fuerte. Creo que deberíamos ayudarla.
+- Ayudar a Corina a tomar una decisión
+Narradora: Te voy a ayudar a definir qué hacer, Corina. No quiero que lo hagas sola.
+Corina parece dejar de hervir. Tenés miedo de volver a provocarla.
+label options_corina
+¿Qué hacés?
+- Preguntarle cómo cuida sus plantas | [if {Folder.valopcor1} == false]
+	Narradora: ¿Cómo cuidás tus plantas, Corina?
+	Corina te mira como confundida. No entiende bien lo que querés decir.
+	Corina: Como se tienen que cuidar, obviamente. Con amor.
+	Burbuja: ¿Con amor?
+	Corina: Claro, con amor.
+	- ¿Qué es el amor para vos?
+		Narradora: ¿Qué es el amor, Corina?
+		Corina: ¿Qué es el amor para mí?
+		Corina: El amor es verde. Es clorofílico.
+		Corina: El amor es verde y late a base de clorofilia.
+		Corina: El amor es frutal, es...
+		Corina: Floreado, primaveral y frondoso.
+		Corina: Más o menos eso.
+		- "¿Alguna vez amaste así?"
+			¿Alguna vez amaste así, Corina?
+			Corina arquea una ceja.
+			Corina: Sí, claro. Es así como amo a mis veges.
+			Corina: Si te referís a alguien más, no lo sé. Tampoco sé si me importa.
+			Corina: Mi amor le pertenece sólo a ellas.
+			Pop se sacude en tu mano.
+			if {Folder.valopcor2} == true:
+				Burbuja: Ya tenemos toda la información que necesitamos... creo. Tomemos una decisión.
+			else:
+				Burbuja: Esto no fue de mucha ayuda. Preguntémosle otra cosa.
+			set {Folder.valopcor1} = true
+			jump options_corina
+		- "¿Alguna vez te amaron así?"
+			Narradora: ¿Te han llegadoa amar con esa intensidad, Corina?
+			Corina se sorprende por tu pregunta.
+			Corina: Sí... no. Mis verdus seguro que me aman, pero es verdad que no tengo la seguridad.
+			Corina: Más allá de ellos...
+			Corina se queda pensativa unos segundos, y luego enrojece de bronca.
+			Corina: ¡BASTA! ¡NO QUIERO NI ESCUCHARLO!
+			set {Folder.valcor} += 1
+			if {Folder.valcor} > 4:
+				jump ENOJADA
+			Corina: ¿¡Por qué me decís esto!? ¿Querés torturarme?
+			Narradora: ¿A qué te referís?
+			Corina te mira con desdén.
+			Corina: No a todos nos han amado.
+			if {Folder.valopcor2} == true:
+				Burbuja: Ey, esto no pinta bien. Ya elijamos un opción, que estarnos quietas va a salir mal.
+			else:
+				Burbuja: Mucha charla. Preguntmos algo más. me aburro.
+			set {Folder.valopcor1} = true
+			set {Folder.optfinal_cor1} = true
+			jump options_corina
+	- "¿Qué hacías concretamente?"
+		Narradora: Pero, específicamente, ¿qué hacías? Porque no me dice nada que me digas que lo hacías con amor.
+		set {Folder.valcor} += 1
+		if {Folder.valcor} > 4:
+			jump ENOJADA
+		Corina te mira apretando los puños, pero luego los relaja y sonríe.
+		Tenés razón, no es una descripción suficiente.\
+		Te pido disculpas.
+		Burbuja: No pasa nada, ¡pero decile!
+		Corina: Está bien. Pero le hablaba a ella, no a vos.
+		Corina: Básicamente, les doy todo lo que necesita un vegetal, y más. Muchos besos, muchos mimos, caricias, abrazos...
+		Corina: Como dije, todo lo que una planta podría necesitar.
+		- "¿Las alimentabas?"
+			Narradora: Y, ¿Alimentabas a tus plantas, además de darles cariño? ¿Las regabas? Porque si no, obviamente se te van a morir.
+			Corina: ¿¡QUÉ ME DECÍS!?
+			set {Folder.valcor} += 1
+			if {Folder.valcor} > 4:
+				jump ENOJADA
+			Corina aprieta los dientes por unos segundos, pero finalmente, se relaja.
+			Corina: No, no las regaba. Las plantas no necesitan que las riegues; necesitan que las quieras. ¿Nunca viste a una verdura bailar? ¿A una flor llorar de soledad?
+			Narradora: . . .
+			Corina: Bueno, yo sí. No es lindo. Nadie debería sufrir como sufren ellas, inmóvibles, débiles, dóciles.
+			Corina: Así que no, no las riego. No necesitan agua. Necesitan saliva y calor corporal.
+			- "¿Hace cuánto las cuidás así?"
+				Narradora: ¿Hace cuánto cuidás así a tus plantas? Con los abrazos y los besos, digo.
+				Corina: Y.... desde que empecé, diría. Nunca hice otra cosa.
+				- "¿No será eso que les hace mal?"
+					Narradora: Y, ¿no creés que por eso sufren? ¿Por tu amor?
+					Corino te mira con horror.
+					Corina: No puedo creer que estés proponiendo esto.
+					- "Es la verdad"
+						Narradora: Pero es cierto, ¿no?
+						Corina no dice nada.
+						Corina: No.
+						set {Folder.valcor} += 1
+						if {Folder.valcor} > 4:
+							jump ENOJADA
+						Corina te mira con bronca.
+						Burbuja: Ay... ya me da miedito.
+						if {Folder.valopcor2} == true:
+							Burbuja: Ya empecemos a tomar una decisión, ¿dale?
+						else:
+							Burbuja: Mejor preguntemos algo más tranqui.
+						set {Folder.valopcor1} = true
+						jump options_corina
+			- "¿No necesitan calor de verdad?"
+				Narradora: ¿Luz del sol no les das?
+				Corina: Sí, claro, entra por el vidrio.
+				Narradora: ¿Y les da calor?
+				Corina: No, es por la luz.
+				Narradora: ¿Por qué decís que no?
+				Narradora: Porque yo no siento calor bajo el sol, así que ellas tampoco deben sentirlo. Además, con mi calor deben estar bien.
+				Echás un vistazo a las plantas. Están muy secas.
+				if {Folder.valopcor2} == true:
+					Narradora: Okay, creo que tengo una idea...
+				else:
+					Burbuja: Esto no tiene mucha pinta. Cambiemos de tema.
+				set {Folder.valopcor1} = true
+				jump options_corina
+		- "¿Las amabas lo suficiente?"
+			Narradora: ¿Y estás segura de que el amor era el suficiente?
+			Corina piensa, meditativa. Algo en ella parece hacer click.
+			set {Folder.valcor} -= 1
+			Corina: Claro, quizás no. Quizás me hacía falta eso, amarlas más.
+			Narradora: Quizás sí.
+			Corina: Quizás el amor que ofrecía no era suficiente para que cada hojita de pasto sobreviviera.
+			Corina: Para que cada flor
+			Corina: Cada manzanita...
+			Narradora: Tranqui, Corina.
+			Corina: Pero es real. Estoy un poco alterada.
+			- Abrazarla y consolarla
+				Abrazás suavemente a Corina.
+				Narradora: Tranqui. Va a pasar.
+				Corina: ¿Cómo puedo saberlo?.
+				Narradora: Te lo estoy diciendo, creeme.
+				Corina sonríe. Confía en vos.
+				if {Folder.valopcor2} == true:
+					Narradora: Admás, sé qué te puede hacer sentir mejor....
+				else:
+					Burbuja: Sigamos preguntando, queda mucho por averiguar.
+				set {Folder.valopcor1} = true
+				jump options_corina
+			- Cantarle una canción
+				Empezás a cantar una melodía suave, pero Corina te detiene.
+				Corina: ¿Qué hacés?
+				Retrocedés unos pasos.
+				Narradora: Te cantaba una cancioncita...
+				Corina: No soy una nena.
+				Tragás saliva.
+				set {Folder.valcor} += 1
+				if {Folder.valcor} > 4:
+					jump ENOJADA
+				if {Folder.valopcor2} == true:
+					Burbuja: Mejor empezá  a definir.
+				else:
+					Burbuja: No te pongas nerviosa. Seguí preguntando.
+				set {Folder.valopcor1} = true
+				jump options_corina
+- Preguntarle quién cuidaba el jardín antes | [if {Folder.valopcor2} == false]
+	Narradora: Dijiste que empezaste a cuidar el jardín hace un tiempo, Corina. ¿Quién cuidaba antes de tus plantas?
+	Corina lenvata los hombros, indiferente.
+	Corina: Ni idea, ¿por qué lo sabría?
+	Burbuja: ¿No te preocupa?
+	Corina: Para nada. ¿Debería?
+	- "¿No podemos contactarla?"
+		Narradora: ¿No podemos contactar de alguna manera con esa persona?
+		Corina alza una ceja.
+		Corina: ¿Para qué? No lo necesitamos, ¿no?
+		Narradora: Y, para que nos diga cómo cuidaba sus plantas.
+		Corina: Ah.
+		Corina parece estar pensándolo.
+		Corina: No es tan mala idea.\
+		Quizás hay una manera.
+		set {Folder.valcor} -= 1
+		- "¿Cuál es esa manera?"
+			Narradora: ¿Cómo podemos contarctarla?
+			Corina: Tengo un número, nada más. Tampoco sé de qué serviría.
+			Corina: Confío plenamente en que mi método era adecuado.
+			Corina: Pero es verdad que podría darme otra perspectiva.
+			Corina suspira, algo aliviada.
+			Corina: No es mala idea. Podría intentarlo.
+			Burbuja: ¡Pensalo, Corina! ¡No está mal pedir ayuda!
+			set {Folder.valcor} -= 1
+			if {Folder.valopcor1} == true:
+				Narradora: Totalmente. De todos modos, ya sé qué deberías hacer.
+			else:
+				Narradora: Coincido. Pero cambiemos de tema.
+			set {Folder.optfinal_cor2} = true
+			set {Folder.valopcor2} = true
+			jump options_corina
+		- "¡Hagámoslo!"
+			Narradora: No perdamos el tiempo, entonces. ¡Contactémosla!
+			Corina: ¿Eh!
+			Corina te enfría los huesos con su mirada.
+			Corina: No pretendas que vaya a hacer ese esfuerzo así sin más. No tengo ganas.
+			Corina: Y ni sé quién es, apenas tengo un contacto numérico.
+			Corina se cruza de brazos. Parece ofendida.
+			set {Folder.valcor} += 1
+			if {Folder.valcor} > 4:
+				jump ENOJADA
+			if {Folder.valopcor1} == true:
+				Burbuja: Parece que no le gustó lo que dijimos. Tomemos una decisión de una vez.
+			else:
+				Quizás es mejor cambiar de tema de conversación.
+			set {Folder.valopcor2} = true
+			jump options_corina
+	- "¿Y si ella tiene la culpa?"
+		Narradora: ¿Y si es por la anterior jardinera que el jardín está muriendo?
+		Corina te mira extrañada.
+		Corina: ¿Cómo podés proponer eso?\
+		Sabés que fue mi culpa.
+		Corina: No eches responsabilidad sobre otro inocente.
+		set {Folder.valcor} += 1
+		if {Folder.valcor} > 4:
+			jump ENOJADA
+		Narradora: Ah... perdón.
+		Corina: Tranqui, pero esto fue mi culpa.
+		Corina: Ella no hizo nada malo, nunca. Siempre fue muy buena en su trabajo.
+		- "Sos demasiado buena"
+			Narradora: Sos muy amable, Corina. Amable de más.
+			Corina: ¿A qué te referís?
+			Narradora: Decís que la anterior jardinera no hizo nada malo, pero no lo sabés. Eso te hace muy buena.
+			Corina frunce el ceño.
+			Corina: Estás confundida. Estoy siendo honesta, no buena.
+			Corina: La honestidad no debe ser aplaudida. Es el mínimo indispensable.
+			Corina: No entiendo por qué te parece tan impresionante.
+			if {Folder.valopcor1} == true:
+				Burbuja: ¡Tomemos una decisión! Esto está tardando mucho tiempo, y estamos estresando a Corina.
+			else:
+				Burbuja: Cambiemos de tema, por favor. La estamos haciendo enojar.
+			set {Folder.valopcor2} = true
+			jump options_corina
+		- "Te exigís mucho"
+			Narradora: Te exigís demasiado, Corina.
+			Corina: ¿A qué te referís?
+			Narradora: Decís que la anterior jardinera nunca hizo nada malo.\
+			Pero seguro a algún plantín debe haber matado.
+			Narradora: Vos también mataste a un plantín. \
+			Tampoco es tan grave.
+			Narradora: Entiendo que te hace reflexionar, pero ¿no creés que es demasiado escándalo por algo que no es para tanto?
+			Corina: Em...
+			Corina: Corina se queda pensando.
+			if {Folder.valopcor1} == true:
+				Burbuja: Creo que sabemos qué decisión tomar ahora, ¿no?
+			else:
+				Burbuja: Preguntemos algo más. Nos estamos acercando a la verdad.
+			set {Folder.valopcor2} = true
+			jump options_corina
+- Tomar una decisión
+	if {decision_cor_on} == false:
+		if {Folder.valopcor2} == false
+			if {Folder.valopcor1} == false
+				Narradora: Ya sé qué hacer, Corina.
+				Corina: ¿Eh? Mirá, Hermosa, no es que no confíe en vos...
+				Corina: Pero me enoja que intentes aconsejarme sabiendo tan poco de mí.
+				Es cierto, quizás todavía no preguntaste lo suficiente...
+				set {folder.valcor} += 1
+				set {decision_cor_on} == true
+				jump options_corina
+			if {Folder.valopcor1} = true
+				Narradora: Ya sé qué hacer, Corina.
+				Corina: ¿Eh? Mirá, Hermosa, no es que no confíe en vos...
+				Corina: Pero me enoja que intentes aconsejarme sabiendo tan poco de mí.
+				Es cierto, quizás todavía no preguntaste lo suficiente...
+				set {folder.valcor} += 1
+				set {decision_cor_on} == true
+				jump options_corina
+		else:
+			if {Folder.valopcor2} == true
+				if {Folder.valopcor1} == false
+					Narradora: Ya sé qué hacer, Corina.
+					Corina: ¿Eh? Mirá, Hermosa, no es que no confíe en vos...
+					Corina: Pero me enoja que intentes aconsejarme sabiendo tan poco de mí.
+					Es cierto, quizás todavía no preguntaste lo suficiente...
+					set {folder.valcor} += 1
+					set {decision_cor_on} == true
+					jump options_corina
+	else:
+		if {Folder.valopcor2} == false
+			if {Folder.valopcor1} == false
+				Narradora: Ya sé qué hacer, Corina.
+				Corina: Perdón, pero...
+				Corina: No puedo aceptar ayuda de una impaciente.
+				Narradora: Ah...
+				Corina te mira decepcionada. No va a aceptar más preguntas de tu parte.
+			else:
+				Narradora: Ya sé qué hacer, Corina.
+				Corina: Perdón, pero...
+				Corina: No puedo aceptar ayuda de una impaciente.
+				Narradora: Ah...
+				Corina te mira decepcionada. No va a aceptar más preguntas de tu parte..
+		if {Folder.valopcor2} == true
+			if {Folder.valopcor1} == false
+				Narradora: Ya sé qué hacer, Corina.
+				Corina: Perdón, pero...
+				Corina: No puedo aceptar ayuda de una impaciente.
+				Narradora: Ah...
+				Corina te mira decepcionada. No va a aceptar más preguntas de tu parte..
+	if {Folder.valopcor2} == true
+		{Folder.valopcor1} == true
+		- "Dejá que otra persona cuide tus plantas"
+			Dejá que alguien más se ocupe de cuidar las plantas, Corina.
+			Corina te mira, confundida.
+			Corina: ¿Por qué lo decís?
+			- "Porque te va a desestresar"
+				Narradora: Te va a desestresar. Hace mucho te enojás por todo.
+				Corina: Eso no es cierto.
+				Narradora: Sí es cierto. Haceme caso. No podés vivir así.
+				Corina parece estar pensándolo.
+				Narradora: Además, ¿por qué vivrías torturada?
+				Narradora: ¿Por qué vivirías enoajda?
+				Narradora: ¿No querés delegarle esta tarea a alguien más?
+				Corina respira profundamente, y te mira sonriendo.
+				jump Endingok
+				[end_timeline]
+			- "Porque ya no podés ocuparte"
+				Narradora: Porque no podés seguir ocupándote de esto.
+				Corina: Vas a seguir dañando a las plantas que amás.
+				Corina: Es cierto...
+				Narradora: Además, hace tiempo deberías haber dejado esto. Podrías haber evitado la muerte del plantín.
+				Corina levanta la vista y te mira, furiosa.
+				Corina: ¿¡CÓMO!?
+				set {Folder.valcor} += 1
+				if {Folder.valcor} > 4:
+					jump ENOJADA
+				Narradora: Sólo quiero decirte eso. Que tenés que empezar a ser responsable con tus decisiones.
+				Narradora: Y prevenir antes que curar.
+				Corina suspira, frustrada, y te mira.
+				jump Endingbad
+				[end_timeline]
+			- "Porque le corresponde a la anterior jardinera" | [if {Folder.optfinal_cor1} == true]
+				Narradora: Porque la anterior jardinera debería ocuparse. Vos deberías descansar.
+				Narradora: Y quizás volver otro día, más descansada.
+				Corina: ¿Creés que eso es posible?
+				Los ojos de Corina se iluminan.
+				Corina: Yo diría que sí.
+				Narradora: Corina sonríe.
+				jump Endinggood
+				[end_timeline]
+		- "Seguí cuidando tus plantas"
+			Seguí cuidando tus plantas vos, Corina.
+			Corina te mira, confundida.
+			Corina: ¿Por qué?
+			[end_timeline]
+			- "Porque las amás profundamente"
+				Narradora: Porque las amás, y demasiado.
+				Narradora: No podés dejarlas ir así como así.
+				Corina arquea una ceja.
+				Corina: Eso ya lo sé. No es esa la ayuda que te estoy pidiendo.
+				Narradora: Parece que no entendés qué me da bronca. Me tratás de boluda. Yo ya sé que amo a mis plantas, no necesito que me digas eso.
+				Aprieta los dientes y te mira enojada.
+				set {Folder.valcor} += 1
+				if {Folder.valcor} > 4:
+					jump ENOJADA
+				Pero, después, se afloja.
+				Narradora: Quería que me des una opinión más profunda.
+				Narradora: Y te mira decepcionada.
+				jump Endingbad
+				[end_timeline]
+			- "Porque nadie las va a cuidar como vos"
+				Narradora: Nadie va a cuidar tus plantas como vas.
+				Narradora: Nadie va a darle tus caricias, tus besos, tus abrazos.
+				Narradora: ¿Cómo querés que vivan sin vos?
+				Corina parece dudar..
+				Corina: ¿No fue justamente eso lo que hizo que se muriera mi plantín?
+				Narradora: Sí, claro. Y, al mismo tiempo, es lo que le dio una vida feliz.
+				No podés arrebatarles es al resto de las plantas.
+				Corina: Corina reflexiona unos segundos, y asiente decidida
+				jump Endingok
+				[end_timeline]
+		- "Dejá morir a tus plantas" | [if {Folder.optfinal_cor2} == true]
+			Narradora: Dejá morir a tus plantas, Corina. Haceme caso.
+			Corina te mira, horrorizada.
+			Corina: ¿Por qué?
+			- "Para ser amada"
+				Narradora: Nunca te han amado, Corina. Las plantas no te aman.
+				Narradora: Vos las amás, pero ese amor no es recíproco.
+				Narradora: Lo sabés, ¿no?
+				Corina te mira en silencio.
+				Narradora: Necesitás ser amada. Buscá el amor donde no lo habías visto antes.
+				Narradora: Buscalo, y encontralo.
+				Se amada como amaste toda tu vida.
+				Corina: Corina te mira con los ojos bien, bien abiertos. \
+				Y sonríe calidamente.
+				jump Endingok
+				[end_timeline]
+				- "Porque no te merecen"
+					Narradora: Estas plantas no te merecen, Corina.
+					Narradora: Merecés tanto más que unas míseras plantas.
+					Narradora: Podés tener tanto más que...
+					Corina: No lo puedo creer.
+					Corina te mira a los ojos. Su mirada son astillas, se clavan en tus pupilas.
+					Corina: Voy a tener que pedirte que tengas más cuidado con lo que decís. Arrepentite, ya.
+					Narradora: ¡Pero es en serio!
+					Burbuja: Ay, ay, ay...
+					Corina parece a punto de abalanzarse sobre vos, como una pantera.
+					jump ENOJADA
+					[end_timeline]
+				label Endingok
+				Corina: Te voy a hacer caso, hermosa.
+				Corina: Esta vez, creo que tuviste un buen punto.
+				Burbuja: ¡Ey, Corina! ¡Qué bueno!
+				Corina: Sí, sí. Va a salir bien.
+				Corina te mira, sonriente.
+				Corina: Gracias, hermosa. Vos también sos medio vegetal.
+				No podés evitar sonreír. Se siente bien ayudar a alguien.
+				[end_timeline]
+				[signal arg="final_signal"]
+				label Endinggood
+				Corina: Nunca hubiera pensado algo así, hermosa.
+				Corina: Y, la verdad, tiene todo el sentido del mundo.
+				Narradora: ¿En serio?
+				Corina ríe jovialmente.
+				Corina: Me gustaría que estuvieras más convencida. Pero yo lo estoy, y eso me alcanza.
+				Narradora: Gracias por tu ayuda. En serio.
+				Corina: Si algún día necesitás un consejo, también podés acudir a mí.
+				Te sentís muy feliz, porque Corina está muy feliz.
+				Corina: ¿Cuándo fue la última vez que te sentiste así por otra persona?
+				[end_timeline]
+				[signal arg="final_signal"]
+				label Endingbad
+				Corina: Creo que no puedo tomar tu opinión, hermosa.
+				Narradora: ¿Eh? ¿Por qué no?
+				Burbuja: ¡Eso, Corina! ¿Por qué no?
+				Corina: No la siento honesta. Tampoco la siento buena.
+				Corina: Lamento haberte hecho perder el tiempo, en serio. Pero simplemente no puedo aceptar tu consejo.
+				Burbuja: Bueno... qué pena.
+				Te sentís un poco decepcionada. Deberías haber podido aconsejarla mejor. ¿Acaso había lugar para mejores consejos en tu cabeza? ¿O sólo podés dar malos consejos?
+				[end_timeline]
+				[signal arg="final_signal"]
+				label ENOJADA
+				Corina: No aguanto más.
+				Burbuja: ¿Perdón?
+				Corina: ¡¡NO [pause = 0.5]AGUANTO  [pause = 0.5]MÁS!!
+				Corina: No puede ser que me trates de idiota y salgas así, como si nada.
+				Corina: Y que esperes... ¡que no voy a estallar!
+				Corina: ¿¿Pretendías que estuviera todo bien??
+				Corina parece estar descendiendo en la locura y la rabia. No sabés qué decir. No querés inerrumpirla.
+				Corina habla por facilmente diez minutos de lo enojada que está con vos. Antes de terminar, te escupe.
+				Corina: No vuelvas a hablarme. A mí nadie me trata de idiota.
+				Corina: Y hace de cuenta que no existís. Probablemente, sea así para siempre.
+				[end_timeline]

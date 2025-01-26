@@ -6,6 +6,7 @@ extends CharacterBody3D
 
 var player_in_range = false
 var repeticion = true
+var decisiones = true
 
 # Función que se ejecuta cuando el nodo está listo en la escena
 
@@ -50,5 +51,8 @@ func _process(_delta):
 
 # Función para manejar la interacción
 func interact():
+	if decisiones:
 	# Aquí va lo que sucederá cuando el jugador presione la tecla de interacción (E)
-	Dialogic.start("Timelines Dialogos Juego/MANU DECISIÓN")
+		Dialogic.start("CorinaDECISIÓN")
+		global.decisiones += 1
+		decisiones = false
