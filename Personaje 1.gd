@@ -1,7 +1,9 @@
 extends CharacterBody3D
 
 #Manu
-@onready var musica: AudioStreamPlayer = $AudioStreamPlayer
+@onready var musica = $"../manu"
+
+
 
 var player_in_range = false
 var repeticion = true
@@ -10,7 +12,7 @@ var repeticion = true
 
 func _ready():
 	#Creo la variable de la ruta
-#	musica.play()
+
 	var area = $Area3D
 	area.connect("body_entered", Callable(self, "_on_body_entered"))  # Conectas la señal a la función
 	area.connect("body_exited", Callable(self, "_on_body_exited"))  # Conectas la señal a la función
@@ -18,9 +20,11 @@ func _ready():
 # Esta función se llama cuando otro cuerpo entra en el área de proximidad
 func _on_body_entered(body):
 	# Verificamos que el cuerpo que entra es el jugador.
+	
 	if body is CharacterBody3D:  # Cambia esto si es un nodo específico (como la puerta)
 		if body.name == "Personajeprincipal":
 			player_in_range = true
+			musica.play()
 			print("El jugador ha entrado en el rango de interacción")
 			if repeticion:
 				Dialogic.start("Timelines Dialogos Juego/MANU INTRO")
@@ -35,6 +39,7 @@ func _on_body_exited(body):
 	# Verificamos que el cuerpo que sale es el jugador.
 	if body is CharacterBody3D:  # Cambia esto si es un nodo específico
 		if body.name == "Personajeprincipal":
+			musica.stop()
 			player_in_range = false
 			print("El jugador ha salido del rango de interacción")
 

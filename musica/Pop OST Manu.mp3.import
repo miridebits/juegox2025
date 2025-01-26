@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://68lql1a5r7v4"
+path="res://.godot/imported/Pop OST Manu.mp3-562e189206b494ea83b3cb85c8f7c0f4.mp3str"
+
+[deps]
+
+source_file="res://musica/Pop OST Manu.mp3"
+dest_files=["res://.godot/imported/Pop OST Manu.mp3-562e189206b494ea83b3cb85c8f7c0f4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

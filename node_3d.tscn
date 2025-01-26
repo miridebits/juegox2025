@@ -1,13 +1,18 @@
-[gd_scene load_steps=22 format=3 uid="uid://cfm45yomcp1n4"]
+[gd_scene load_steps=27 format=3 uid="uid://cfm45yomcp1n4"]
 
 [ext_resource type="Script" path="res://base.gd" id="1_pbv5a"]
 [ext_resource type="Texture2D" uid="uid://buj43rhvrxou7" path="res://partly-cloudy-sky_0_5K_ffa52c47-b8b2-42e1-92eb-b22b1ac43348.exr" id="2_2jr6e"]
+[ext_resource type="AudioStream" uid="uid://68lql1a5r7v4" path="res://musica/Pop OST Manu.mp3" id="2_4h4wc"]
 [ext_resource type="Script" path="res://Personaje 1.gd" id="2_racle"]
+[ext_resource type="AudioStream" uid="uid://btg526owfk5bd" path="res://musica/Pop OST Antropo A - Estrella.mp3" id="3_5mvbo"]
 [ext_resource type="PackedScene" uid="uid://dikbdcffvrkat" path="res://manu.glb" id="3_aumme"]
+[ext_resource type="AudioStream" uid="uid://cc2f8lxlarqyr" path="res://musica/Pop OST Antropo B.mp3" id="3_bqcsr"]
 [ext_resource type="PackedScene" uid="uid://dsovoplmkfiyq" path="res://jugador.tscn" id="3_qsso3"]
 [ext_resource type="PackedScene" uid="uid://e6nnq3445whe" path="res://CASA.glb" id="4_dy6kp"]
+[ext_resource type="AudioStream" uid="uid://dpwa4mw17ao13" path="res://musica/Pop OST Corina.mp3" id="4_lcjb4"]
 [ext_resource type="Script" path="res://SofiaV.gd" id="5_3iwx2"]
 [ext_resource type="Script" path="res://Penta.gd" id="6_gut4j"]
+[ext_resource type="AudioStream" uid="uid://bcdo6wc8f2oof" path="res://musica/Pop OST Narradora 1.mp3" id="6_t1383"]
 [ext_resource type="Script" path="res://Corina.gd" id="7_ckl36"]
 [ext_resource type="PackedScene" uid="uid://mmwo0uyd6ol7" path="res://penta.glb" id="9_o7k0h"]
 [ext_resource type="PackedScene" uid="uid://4tfuha2llpt0" path="res://sofia v.glb" id="10_4xmcd"]
@@ -46,6 +51,38 @@ data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0
 [node name="Escena base" type="Node3D"]
 transform = Transform3D(1.008, 0, 0, 0, 1.008, 0, 0, 0, 1.008, -0.132519, 2.38419e-07, 0.779305)
 script = ExtResource("1_pbv5a")
+
+[node name="manu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_4h4wc")
+volume_db = -0.16
+
+[node name="sofi" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_5mvbo")
+volume_db = -0.16
+
+[node name="corina" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_lcjb4")
+volume_db = -0.16
+
+[node name="penta" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_bqcsr")
+volume_db = -0.16
+
+[node name="narradora" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_t1383")
+volume_db = -0.16
+
+[node name="musica6" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_4h4wc")
+volume_db = -0.16
+
+[node name="musica7" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_4h4wc")
+volume_db = -0.16
+
+[node name="musica8" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_4h4wc")
+volume_db = -0.16
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_k6emj")
@@ -89,11 +126,11 @@ script = ExtResource("6_gut4j")
 transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Penta/Area3D"]
-transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0.998, -1.07, -8.184)
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0.313439, 1.27485, -8.50527)
 shape = SubResource("SphereShape3D_584dp")
 
 [node name="penta" parent="Penta/Area3D" instance=ExtResource("9_o7k0h")]
-transform = Transform3D(-0.563958, 0, 0.825804, 0, 1, 0, -0.825804, 0, -0.563958, 0.998444, 0.149816, -8.1841)
+transform = Transform3D(-0.563958, 0, 0.825804, 0, 1, 0, -0.825804, 0, -0.563958, 0.998443, 0.149816, -8.1841)
 
 [node name="Corina" type="CharacterBody3D" parent="."]
 transform = Transform3D(-0.563958, 0, -0.825803, 0, 1, 0, 0.825803, 0, -0.563958, -5.85229, 0.0127523, -2.45514)
@@ -107,7 +144,7 @@ transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 6.089, 0
 shape = SubResource("SphereShape3D_12757")
 
 [node name="corina2" parent="Corina/Area3D" instance=ExtResource("11_q8eb2")]
-transform = Transform3D(0.0892595, 0, -0.996009, 0, 1, 0, 0.996009, 0, 0.0892595, 6.08927, -0.478739, -5.99046)
+transform = Transform3D(0.0892597, 0, -0.996009, 0, 1, 0, 0.996009, 0, 0.0892597, 6.08927, -0.254591, -5.99046)
 
 [node name="CASA" parent="." instance=ExtResource("4_dy6kp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1709, -0.00170725, 1.33318)
