@@ -138,6 +138,13 @@ light_indirect_energy = 7.069
 spot_range = 5.89542
 spot_angle = 42.9034
 
+[node name="SpotLight3D4" type="SpotLight3D" parent="."]
+transform = Transform3D(0.992063, 0, 0, 0, 0.165052, 0.978237, 0, -0.978237, 0.165052, -4.68375, 8.26874, 6.15362)
+light_energy = 9.932
+light_indirect_energy = 7.069
+spot_range = 11.9792
+spot_angle = 27.675
+
 [node name="SpotLight3D3" type="SpotLight3D" parent="."]
 transform = Transform3D(0.992063, 0, 0, 0, -4.33645e-08, 0.992063, 0, -0.992063, -4.33645e-08, 2.39776, 4.06121, 3.54606)
 light_energy = 13.453
