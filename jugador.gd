@@ -28,12 +28,13 @@ func _unhandled_input(event: InputEvent) -> void:
 func _on_dialogic_signal(argument: String):
 	if argument == "signal":
 		movimiento = false
+		print("comienza el movimiento")
 		return movimiento
 		
 func _on_dialogic_signal_2(argument: String):
 	if argument == "final_signal":
 		movimiento = true
-		print("movimiento")
+		print("termina el movimiento")
 		return movimiento
 		
 func _physics_process(delta: float) -> void:

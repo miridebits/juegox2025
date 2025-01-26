@@ -329,6 +329,7 @@ Manu te mira a los ojos con frialdad.
 Manu: Ni me sorprende.
 Manu: Por favor, no vuelvan a hablarme.
 Cuando Manu aparte su mirada de vos, sentís que le fallaste gravemente. ¿A cuánta gente le habrás fallado así antes?
+[signal arg="final_signal"]
 [end_timeline]
 
 
@@ -360,6 +361,8 @@ else:
 	Narradora: Me encantaría. Veámonos más tarde.
 	Manu sonríe. Por primera vez, se ve feliz de verdad.
 	Manu: Por favor, no cierren la puerta al salir.
+	[signal arg="final_signal"]
+	[end_timeline]
 
 label VEREDICTO
 if {valdes1} > 2:
@@ -414,4 +417,5 @@ Manu\: Así que voy a decidir confiar en vos.
 	Manu: Algún día iba a tener que poner mi vida en las manos de alguien.
 	Manu: Dejen la puerta abierta cuando salgan, por favor. Y espero volver a verlos. Quizás no pronto.
 	No podés evitar sonreír. Fue un éxito, e hiciste el bien. Efectivamente, las cosas están cambiando.
-[signal arg="final_signal"]
+	[signal arg="final_signal"]
+	[end_timeline]
