@@ -13,11 +13,12 @@ Y la fragilidad en tus manos se vuelve
 MÁS
 IMPORTANTE
 QUE NUNCA.
-[signal arg="cae"]
 # Se desvanece la pantalla negra, se ve la habitación.
 Burbuja: Ey... [pause = 1]
 Burbuja: Ey... [pause = 1]
 Burbuja: ¡EY!
+[signal arg="cae"]
+[signal arg="signal"]
 Entonces, abrís los ojos.
 Burbuja: ¿Estás bien?
 Narradora: ¿Cómo?
@@ -47,3 +48,4 @@ Burbuja: Algo frágil, que no podés dañar...
 Burbuja: Recorramos la casa, ¿dale? Hace mucho que no veo a los inquilinos del lugar.\
 Me pregunto en qué andarán. \
 Siempre tan necesitados...
+[signal arg="final_signal"]

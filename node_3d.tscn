@@ -39,7 +39,7 @@ radius = 1.38507
 radius = 1.385
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_584dp"]
-radius = 1.35
+radius = 5.375
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_12757"]
 radius = 1.35
@@ -91,7 +91,7 @@ volume_db = -0.16
 environment = SubResource("Environment_k6emj")
 
 [node name="Personajeprincipal" parent="." instance=ExtResource("3_qsso3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.96984, 1.19294, -0.111315)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5879, 1.19294, -0.863299)
 
 [node name="Manu" type="CharacterBody3D" parent="."]
 transform = Transform3D(-0.563958, 0, -0.825803, 0, 1, 0, 0.825803, 0, -0.563958, -9.309, 0, -5.123)
@@ -129,11 +129,11 @@ script = ExtResource("6_gut4j")
 transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Penta/Area3D"]
-transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0.313439, 1.27485, -8.50527)
+transform = Transform3D(0.310448, 0.185356, 0.0361447, -0.185356, 0.285764, 0.126583, 0.0361445, -0.126583, 0.338691, 0.959172, 0.878828, -8.52705)
 shape = SubResource("SphereShape3D_584dp")
 
 [node name="penta" parent="Penta/Area3D" instance=ExtResource("9_o7k0h")]
-transform = Transform3D(-0.563958, 0, 0.825804, 0, 1, 0, -0.825804, 0, -0.563958, 0.998443, 0.149816, -8.1841)
+transform = Transform3D(-0.563958, 0, 0.825804, 0, 1, 0, -0.825804, 0, -0.563958, 0.998442, 0.149816, -8.1841)
 
 [node name="Corina" type="CharacterBody3D" parent="."]
 transform = Transform3D(-0.563958, 0, -0.825803, 0, 1, 0, 0.825803, 0, -0.563958, -5.85229, 0.0127523, -2.45514)

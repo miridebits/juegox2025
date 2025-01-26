@@ -53,7 +53,7 @@ func interact():
 	if decisiones:
 		if global.decisiones == 3:
 		# Aquí va lo que sucederá cuando el jugador presione la tecla de interacción (E)
-			Dialogic.start("Timelines Dialogos Juego/MANU DECISIÓN")
+			Dialogic.start("PentaDECISION")
 			decisiones = false
 			global.decisiones += 1
 		else:

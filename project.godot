@@ -46,6 +46,7 @@ directories/dtl_directory={
 "CorinaDECISIÓN": "res://CorinaDECISIÓN.dtl",
 "CorinaINTRO": "res://CorinaINTRO.dtl",
 "INTROaljuego": "res://Introducción/INTROaljuego.dtl",
+"PentaDECISION": "res://PentaDECISION.dtl",
 "PentaINTRO": "res://PentaINTRO.dtl",
 "SOFIA  DECISIÓN": "res://SOFIA  DECISIÓN.dtl",
 "SofiVINTRO": "res://SofiVINTRO.dtl",

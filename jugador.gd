@@ -3,7 +3,6 @@ extends CharacterBody3D
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
-
 var movimiento = true
 
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
@@ -25,16 +24,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				camera.rotate_x(-event.relative.y * 0.01)
 				camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-30), deg_to_rad(60))
 
-func _on_dialogic_signal(argument: String):
-	if argument == "signal":
-		movimiento = false
-		return movimiento
-		
-func _on_dialogic_signal_2(argument: String):
-	if argument == "final_signal":
-		movimiento = true
-		print("movimiento")
-		return movimiento
+
 		
 func _physics_process(delta: float) -> void:
 	Dialogic.signal_event.connect(_on_dialogic_signal)
@@ -55,3 +45,14 @@ func _physics_process(delta: float) -> void:
 			velocity.z = move_toward(velocity.z, 0, SPEED)
 
 		move_and_slide()
+
+func _on_dialogic_signal(argument: String):
+	if argument == "signal":
+		movimiento = false
+		return movimiento
+		
+func _on_dialogic_signal_2(argument: String):
+	if argument == "final_signal":
+		movimiento = true
+		print("movimiento")
+		return movimiento
